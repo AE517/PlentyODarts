@@ -3,38 +3,38 @@ DamageClasses.DartDamage.DisplayName: Dart Damage
 Items: {
 	WoodenDart: {
 		DisplayName: Wooden Dart
-		Tooltip: '[c/346450:"The classic, Good and Reliable"]'
+		Tooltip: '''[c/346450:"The classic, Good and Reliable"]'''
 	}
 
 	StarryDart: {
 		DisplayName: Starry Dart
-		Tooltip: 
-		'''
-		Critical hits makes a star fall from the sky...
-		Yes, even at daytime...
-	
-		[c/346450:"A fragment of the stars"]
-		'''
+		Tooltip:
+			'''
+			Critical hits makes a star fall from the sky...
+			Yes, even at daytime...
+
+			[c/346450:"A fragment of the stars"]
+			'''
 	}
 
 	PoisonDart: {
 		DisplayName: Poison Dart
-		Tooltip: 
-		'''
-		Critical Hits leaves the target poisoned regardless of immunities.
+		Tooltip:
+			'''
+			Critical Hits leaves the target poisoned regardless of immunities.
 
-		[c/346450:"It Stings!"]
-		'''
+			[c/346450:"It Stings!"]
+			'''
 	}
 
 	FrostDart: {
 		DisplayName: Frost Dart
-		Tooltip: 
-		'''
-		Critical Hits inflicts Frostburn regardless of target immunities.
+		Tooltip:
+			'''
+			Critical Hits inflicts Frostburn regardless of target immunities.
 
-		[c/346450:"Chilly... Extra Chilly..."]
-		'''
+			[c/346450:"Chilly... Extra Chilly..."]
+			'''
 	}
 
 	FieryDart: {
@@ -44,7 +44,7 @@ Items: {
 
 	GlassDart: {
 		DisplayName: Glass Dart
-		Tooltip: 
+		Tooltip:
 			'''
 			Critical Hits inflicts Bleeding regardless of target immunities. 
 			Additionally, upon hitting the ground or inflicting critical hits,
@@ -53,6 +53,11 @@ Items: {
 
 			[c/346450:"Now why would even use such thing???"]
 			'''
+	}
+
+	Split: {
+		DisplayName: Split
+		Tooltip: ""
 	}
 }
 
