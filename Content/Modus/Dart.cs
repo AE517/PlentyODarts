@@ -1,7 +1,5 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Modus
 {
@@ -9,47 +7,18 @@ namespace PlentyODarts.Content.Modus
     {
         void ApplyModus(ModusType current, Player player, Vector2 position, Vector2 velocity)
         {
-            switch (current)
+            int m = current switch
             {
-                case ModusType.SPLIT:
-                    for (int i = 0; i <= 1; i++)
-                    {
-                        if (i == 1)
-                        {
-                            Projectile.NewProjectile(
-                                player.GetSource_FromThis(),
-                                position,
-                                velocity,
-                                player.HeldItem.shoot,
-                                player.HeldItem.damage,
-                                player.HeldItem.knockBack
-                            );
-                        }
-                        else
-                        {
-                            Projectile.NewProjectile(
-                                player.GetSource_FromThis(),
-                                position,
-                                -velocity,
-                                player.HeldItem.shoot,
-                                player.HeldItem.damage,
-                                1
-                            );
-                        }
-                    }
-                    break;
-
-                default:
-                    Projectile.NewProjectile(
-                        player.GetSource_FromThis(),
-                        position,
-                        velocity,
-                        player.HeldItem.shoot,
-                        player.HeldItem.damage,
-                        player.HeldItem.knockBack
-                    );
-                    break;
-            }
+                ModusType.SPLIT => new Split().Modus(player, position, velocity),
+                _ => Projectile.NewProjectile(
+                    player.GetSource_FromThis(),
+                    position,
+                    velocity,
+                    player.HeldItem.shoot,
+                    player.HeldItem.damage,
+                    player.HeldItem.knockBack
+                ),
+            };
         }
         //void ApplyShift(Player player);
     }

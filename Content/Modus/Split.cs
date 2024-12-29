@@ -5,8 +5,24 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Modus
 {
-    public class Split : ModItem
+    public class Split : ModItem, IModus
     {
+        public int Modus(Player player, Vector2 position, Vector2 velocity)
+        {
+            for (int i = -1; i <= 1; i += 2)
+            {
+                Projectile.NewProjectile(
+                    player.GetSource_FromThis(),
+                    position,
+                    velocity * i,
+                    player.HeldItem.shoot,
+                    player.HeldItem.damage,
+                    player.HeldItem.knockBack
+                );
+            }
+            return 0;
+        }
+
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Modus - Split");
