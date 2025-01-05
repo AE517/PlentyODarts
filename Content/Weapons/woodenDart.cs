@@ -47,7 +47,6 @@ namespace PlentyODarts.Content.Weapons
         )
         {
             ModusType modus = player.GetModPlayer<PoDPlayer>().currentModus;
-            ShiftType shift = player.GetModPlayer<PoDPlayer>().currentShift;
 
             IDart dart = new WoodenDart();
             dart.ApplyModus(modus, player, position, velocity);

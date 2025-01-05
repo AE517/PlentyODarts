@@ -1,3 +1,5 @@
+using System;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -6,10 +8,10 @@ namespace PlentyODarts.Content.Shift
 {
     public class HyperSpeed : ModItem, IShift
     {
-        public int Shift(Projectile projectile)
+        public int Shift(Projectile projectile, Player player)
         {
-            projectile.velocity *= 2;
-            projectile.damage /= 2;
+            projectile.velocity *= 1.05f;
+            projectile.damage = player.HeldItem.damage / 2;
             return 0;
         }
 

@@ -6,6 +6,6 @@ namespace PlentyODarts.Content.Shift
 {
     public interface IShift
     {
-        int Shift(Projectile projectile);
+        int Shift(Projectile projectile, Player player);
     }
 }

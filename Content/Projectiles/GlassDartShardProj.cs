@@ -57,13 +57,13 @@ namespace PlentyODarts.Content.Projectiles
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             if (target.HasBuff(BuffID.Bleeding))
-                modifiers.FinalDamage += 1.2f;
+                modifiers.FinalDamage += .5f;
         }
 
         public override void ModifyHitPlayer(Player target, ref Player.HurtModifiers modifiers)
         {
             if (target.HasBuff(BuffID.Bleeding))
-                modifiers.FinalDamage += 1.2f;
+                modifiers.FinalDamage += .5f;
         }
     }
 }

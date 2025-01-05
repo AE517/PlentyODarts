@@ -21,7 +21,6 @@ namespace PlentyODarts.Content.Projectiles
             p.height = 32;
             p.scale = 1;
 
-            p.damage = 5;
             p.DamageType = DartDamage.Instance;
             p.CritChance = 5;
             p.knockBack = 2;
