@@ -59,6 +59,11 @@ Items: {
 		DisplayName: Split
 		Tooltip: ""
 	}
+
+	HyperSpeed: {
+		DisplayName: Hyper Speed
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

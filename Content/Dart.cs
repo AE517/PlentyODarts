@@ -1,7 +1,8 @@
 using Microsoft.Xna.Framework;
+using PlentyODarts.Content.Modus;
 using Terraria;
 
-namespace PlentyODarts.Content.Modus
+namespace PlentyODarts.Content
 {
     public interface IDart
     {
@@ -20,6 +21,5 @@ namespace PlentyODarts.Content.Modus
                 ),
             };
         }
-        //void ApplyShift(Player player);
     }
 }
