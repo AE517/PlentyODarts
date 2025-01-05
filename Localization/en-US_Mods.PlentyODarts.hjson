@@ -56,13 +56,25 @@ Items: {
 	}
 
 	Split: {
-		DisplayName: Split
-		Tooltip: ""
+		DisplayName: Modus - Split
+		Tooltip:
+			'''
+			Alters the properties of the equiped Dart allowing to split itself at opposing directions.
+			Only one type of 'Modus' can be equiped.
+
+			[c/346450:"The duality of Darts..."]
+			'''
 	}
 
 	HyperSpeed: {
-		DisplayName: Hyper Speed
-		Tooltip: ""
+		DisplayName: Shift - Hyperspeed
+		Tooltip:
+			'''
+			Increase overral Dart Speed at the cost of it's Damage.
+			Only one type of Shift can be equipped.
+
+			[c/346450:"ZOOOOOOOM!"]
+			'''
 	}
 }
 

@@ -1,4 +1,3 @@
-using PlentyODarts.Content.Modus;
 using PlentyODarts.Content.Projectiles;
 using Terraria;
 using Terraria.ID;
@@ -59,6 +58,7 @@ namespace PlentyODarts.Content.Weapons
                 position,
                 velocity
             );
+
             return false;
         }
 

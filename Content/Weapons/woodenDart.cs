@@ -1,3 +1,4 @@
+using Microsoft.Xna.Framework;
 using PlentyODarts.Content.Modus;
 using PlentyODarts.Content.Projectiles;
 using Terraria;
@@ -46,11 +47,13 @@ namespace PlentyODarts.Content.Weapons
             float knockback
         )
         {
-            ModusType modus = player.GetModPlayer<PoDPlayer>().currentModus;
-
             IDart dart = new WoodenDart();
-            dart.ApplyModus(modus, player, position, velocity);
-
+            dart.ApplyModus(
+                player.GetModPlayer<PoDPlayer>().currentModus,
+                player,
+                position,
+                velocity
+            );
             return false;
         }
 
