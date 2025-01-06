@@ -76,6 +76,11 @@ Items: {
 			[c/346450:"ZOOOOOOOM!"]
 			'''
 	}
+
+	DartStationBasic: {
+		DisplayName: Dart Station Basic
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
