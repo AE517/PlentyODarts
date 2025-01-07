@@ -22,10 +22,10 @@ namespace PlentyODarts.Content.Tiles.Furniture
 
             TileObjectData.newTile.UsesCustomCanPlace = true;
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.Width = 3;
-            TileObjectData.newTile.Height = 3;
+            TileObjectData.newTile.Width = 4;
+            TileObjectData.newTile.Height = 4;
             TileObjectData.newTile.CoordinateWidth = 16;
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16 };
             TileObjectData.newTile.CoordinatePadding = 2;
             TileObjectData.newTile.AnchorBottom = new AnchorData(
                 Terraria.Enums.AnchorType.SolidTile
