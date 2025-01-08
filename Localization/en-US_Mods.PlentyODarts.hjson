@@ -3,7 +3,7 @@ DamageClasses.DartDamage.DisplayName: Dart Damage
 Items: {
 	WoodenDart: {
 		DisplayName: Wooden Dart
-		Tooltip: '''[c/346450:"The classic, Good and Reliable"]'''
+		Tooltip: '''[c/69B595:"The classic, Good and Reliable"]'''
 	}
 
 	StarryDart: {
@@ -13,7 +13,7 @@ Items: {
 			Critical hits makes a star fall from the sky...
 			Yes, even at daytime...
 
-			[c/346450:"A fragment of the stars"]
+			[c/69B595:"A fragment of the stars"]
 			'''
 	}
 
@@ -23,7 +23,7 @@ Items: {
 			'''
 			Critical Hits leaves the target poisoned regardless of immunities.
 
-			[c/346450:"It Stings!"]
+			[c/69B595:"It Stings!"]
 			'''
 	}
 
@@ -33,7 +33,7 @@ Items: {
 			'''
 			Critical Hits inflicts Frostburn regardless of target immunities.
 
-			[c/346450:"Chilly... Extra Chilly..."]
+			[c/69B595:"Chilly... Extra Chilly..."]
 			'''
 	}
 
@@ -51,7 +51,7 @@ Items: {
 			an unpredictable amount of shards will spread causing damage to ANYONE around, inflicting bleeding.
 			Shards do bonus damage to already bleeding targets.
 
-			[c/346450:"Now why would even use such thing???"]
+			[c/69B595:"Now why would even use such thing???"]
 			'''
 	}
 
@@ -62,7 +62,7 @@ Items: {
 			Alters the properties of the equiped Dart allowing to split itself at opposing directions.
 			Only one type of 'Modus' can be equiped.
 
-			[c/346450:"The duality of Darts..."]
+			[c/69B595:"The duality of Darts..."]
 			'''
 	}
 
@@ -73,13 +73,34 @@ Items: {
 			Increase overral Dart Speed at the cost of it's Damage.
 			Only one type of Shift can be equipped.
 
-			[c/346450:"ZOOOOOOOM!"]
+			[c/69B595:"ZOOOOOOOM!"]
 			'''
 	}
 
 	DartStationBasic: {
 		DisplayName: Dart Station Basic
-		Tooltip: ""
+		Tooltip:
+			'''
+			Can be used to make more complex darts.
+
+			[c/69B595:"Every Dartmaster has a certain kind of industriousness..."]
+			'''
+	}
+
+	OceanDart: {
+		DisplayName: Ocean Dart
+		Tooltip:
+			'''
+			A Dart made with the combined forces of the ocean.
+			Primary use: Throws a watery Dart that renders the target wet regardless of immunities.
+			Secondary use: Throws a fiery Dart that on contact with wet targets
+			will create an explosion dealing extra damage.
+			Enimies hit by the explosion will no longer be wet.
+			Both Darts travel faster and deal extra damage on rain and underwater.
+			[c/42CF6A:This Dart is not affected by Modus nor Shifts.]
+
+			[c/69B595:"You exceeded my expectations with this one..."]
+			'''
 	}
 }
 
@@ -91,4 +112,6 @@ Projectiles: {
 	FieryDartProj.DisplayName: Fiery Dart
 	GlassDartProj.DisplayName: Glass Dart
 	GlassDartShardProj.DisplayName: Glass Shard
+	OceanDart2Proj.DisplayName: Fiery Ocean Dart
+	OceanDartProj.DisplayName: Ocean Dart
 }
