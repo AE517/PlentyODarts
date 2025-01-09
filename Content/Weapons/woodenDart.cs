@@ -17,8 +17,8 @@ namespace PlentyODarts.Content.Weapons
 
         public override void SetDefaults()
         {
-            Item.width = 13;
-            Item.height = 48;
+            Item.width = 36;
+            Item.height = 36;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.useTime = 20;
             Item.useAnimation = 20;

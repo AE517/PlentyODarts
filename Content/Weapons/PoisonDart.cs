@@ -15,8 +15,8 @@ namespace PlentyODarts.Content.Weapons
 
         public override void SetDefaults()
         {
-            Item.width = 18;
-            Item.height = 64;
+            Item.width = 32;
+            Item.height = 32;
             Item.scale = 1;
             Item.rare = ItemRarityID.Green;
             Item.noMelee = true;
