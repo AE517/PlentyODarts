@@ -32,7 +32,7 @@ Items: {
 		Tooltip:
 			'''
 			Critical Hits inflicts Frostburn regardless of target immunities.
-
+			Fades quickly in hot environments...
 			[c/69B595:"Chilly... Extra Chilly..."]
 			'''
 	}
@@ -48,7 +48,8 @@ Items: {
 			'''
 			Critical Hits inflicts Bleeding regardless of target immunities. 
 			Additionally, upon hitting the ground or inflicting critical hits,
-			an unpredictable amount of shards will spread causing damage to ANYONE around, inflicting bleeding.
+			an unpredictable amount of shards will spread causing damage to ANYONE
+			around, also inflicting bleeding.
 			Shards do bonus damage to already bleeding targets.
 
 			[c/69B595:"Now why would even use such thing???"]
@@ -78,7 +79,7 @@ Items: {
 	}
 
 	DartStationBasic: {
-		DisplayName: Dart Station Basic
+		DisplayName: Basic Dart Station
 		Tooltip:
 			'''
 			Can be used to make more complex darts.
@@ -97,6 +98,7 @@ Items: {
 			will create an explosion dealing extra damage.
 			Enimies hit by the explosion will no longer be wet.
 			Both Darts travel faster and deal extra damage on rain and underwater.
+			
 			[c/42CF6A:This Dart is not affected by Modus nor Shifts.]
 
 			[c/69B595:"You exceeded my expectations with this one..."]

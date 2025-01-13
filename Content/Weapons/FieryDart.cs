@@ -12,17 +12,14 @@ namespace PlentyODarts.Content.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Fiery Dart");
-            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(9, 5));
-            ItemID.Sets.AnimatesAsSoul[Item.type] = true;
         }
 
         public override void SetDefaults()
         {
             Item i = Item;
 
-            i.height = 62;
-            i.width = 14;
-            i.scale = .5f;
+            i.height = 32;
+            i.width = 32;
 
             i.damage = 15;
             i.crit = 5;
