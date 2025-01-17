@@ -1,0 +1,79 @@
+using PlentyODarts.Content.Projectiles;
+using PlentyODarts.Content.Tiles.Furniture;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace PlentyODarts.Content.Weapons
+{
+    public class Aurpura : ModItem, IDart
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.Format("Aurpura");
+        }
+
+        public override void SetDefaults()
+        {
+            Item i = Item;
+
+            i.width = 40;
+            i.height = 40;
+
+            i.damage = 25;
+            i.DamageType = DartDamage.Instance;
+            i.knockBack = 7;
+            i.crit = 10;
+
+            i.value = Item.sellPrice(0, 0, 10, 0);
+            i.rare = ItemRarityID.Green;
+
+            i.noMelee = true;
+            i.noUseGraphic = true;
+            i.useAnimation = 12;
+            i.useTime = 12;
+            i.useStyle = ItemUseStyleID.Swing;
+            i.UseSound = SoundID.Item39;
+
+            i.consumable = false;
+            i.shoot = ModContent.ProjectileType<AurpuraProj>();
+            i.shootSpeed = 10;
+            i.maxStack = 1;
+        }
+
+        public override bool Shoot(
+            Player player,
+            Terraria.DataStructures.EntitySource_ItemUse_WithAmmo source,
+            Microsoft.Xna.Framework.Vector2 position,
+            Microsoft.Xna.Framework.Vector2 velocity,
+            int type,
+            int damage,
+            float knockback
+        )
+        {
+            IDart dart = new Aurpura();
+            dart.ApplyModus(
+                player.GetModPlayer<PoDPlayer>().currentModus,
+                player,
+                position,
+                velocity
+            );
+
+            return false;
+        }
+
+        public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
+        {
+            damage += player.CountItem(ItemID.GoldOre) / 1000;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe(100)
+                .AddTile(ModContent.TileType<DartStationBasic>())
+                .AddIngredient(ItemID.Granite, 50)
+                .AddIngredient(ItemID.GoldBar)
+                .Register();
+        }
+    }
+}

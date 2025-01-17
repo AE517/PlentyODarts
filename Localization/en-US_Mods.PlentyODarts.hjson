@@ -98,11 +98,16 @@ Items: {
 			will create an explosion dealing extra damage.
 			Enimies hit by the explosion will no longer be wet.
 			Both Darts travel faster and deal extra damage on rain and underwater.
-			
+
 			[c/42CF6A:This Dart is not affected by Modus nor Shifts.]
 
 			[c/69B595:"You exceeded my expectations with this one..."]
 			'''
+	}
+
+	Aurpura: {
+		DisplayName: Aurpura
+		Tooltip: ""
 	}
 }
 
@@ -116,4 +121,6 @@ Projectiles: {
 	GlassDartShardProj.DisplayName: Glass Shard
 	OceanDart2Proj.DisplayName: Fiery Ocean Dart
 	OceanDartProj.DisplayName: Ocean Dart
+	AurpuraProj.DisplayName: Aurpura Proj
+	AurpuraProj2.DisplayName: Aurpura Proj2
 }
