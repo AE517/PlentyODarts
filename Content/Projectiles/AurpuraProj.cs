@@ -41,6 +41,8 @@ namespace PlentyODarts.Content.Projectiles
             p.friendly = true;
             p.hostile = false;
 
+            DrawOriginOffsetY = -4;
+
             AIType = ProjectileID.WoodenArrowFriendly;
         }
 
@@ -60,7 +62,7 @@ namespace PlentyODarts.Content.Projectiles
 
                 foreach (NPC npc in Main.ActiveNPCs)
                 {
-                    if (npc.CanBeChasedBy(Projectile, false))
+                    if (npc.CanBeChasedBy(Projectile, false) && npc != target)
                     {
                         float dist = (Projectile.position - npc.position).Length();
 
@@ -175,6 +177,8 @@ namespace PlentyODarts.Content.Projectiles
 
             p.friendly = true;
             p.hostile = false;
+
+            DrawOriginOffsetY = -4;
 
             AIType = ProjectileID.WoodenArrowFriendly;
         }

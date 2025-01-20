@@ -39,7 +39,11 @@ Items: {
 
 	FieryDart: {
 		DisplayName: Fiery Dart
-		Tooltip: Critical Hits renders the target on fire regardless of immunities.
+		Tooltip:
+			'''
+			Critical Hits renders the target on fire regardless of immunities.
+			[c/69B595: "Hot! HOT!!!"]
+			'''
 	}
 
 	GlassDart: {

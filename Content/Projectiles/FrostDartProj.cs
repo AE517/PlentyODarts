@@ -17,8 +17,8 @@ namespace PlentyODarts.Content.Projectiles
         {
             Projectile p = Projectile;
 
-            p.width = 10;
-            p.height = 16;
+            p.width = 4;
+            p.height = 4;
 
             p.DamageType = DartDamage.Instance;
 
@@ -38,7 +38,7 @@ namespace PlentyODarts.Content.Projectiles
 
         public override bool OnTileCollide(Microsoft.Xna.Framework.Vector2 oldVelocity)
         {
-            SoundEngine.PlaySound(SoundID.Item27);
+            SoundEngine.PlaySound(SoundID.Item27, Projectile.position);
 
             for (int i = 0; i <= 15; i++)
             {
@@ -79,7 +79,7 @@ namespace PlentyODarts.Content.Projectiles
                 if (target.HasBuff(BuffID.Wet))
                     target.AddBuff(BuffID.Slow, 300);
 
-                SoundEngine.PlaySound(SoundID.Shatter);
+                SoundEngine.PlaySound(SoundID.Shatter, target.position);
             }
         }
 

@@ -19,8 +19,8 @@ namespace PlentyODarts.Content.Projectiles
         {
             Projectile p = Projectile;
 
-            p.height = 16;
-            p.width = 3;
+            p.height = 4;
+            p.width = 4;
 
             p.DamageType = DartDamage.Instance;
             p.knockBack = 1;
@@ -35,6 +35,8 @@ namespace PlentyODarts.Content.Projectiles
 
             p.friendly = true;
             p.hostile = false;
+
+            DrawOriginOffsetY = -5;
 
             AIType = ProjectileID.WoodenArrowFriendly;
         }
@@ -80,7 +82,7 @@ namespace PlentyODarts.Content.Projectiles
         {
             Player player = Main.LocalPlayer;
 
-            if (Projectile.owner == Main.myPlayer)
+            if (Projectile.owner == player.whoAmI)
             {
                 if (player.ZoneUnderworldHeight)
                     Projectile.timeLeft += 2;
