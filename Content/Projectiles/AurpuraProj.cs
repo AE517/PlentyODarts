@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -29,7 +28,7 @@ namespace PlentyODarts.Content.Projectiles
             p.scale = 1;
 
             p.DamageType = DartDamage.Instance;
-            p.CritChance = 100;
+            p.CritChance = 10;
 
             p.aiStyle = 1;
             p.timeLeft = 600;
@@ -55,27 +54,68 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (hit.Crit)
+            float minDist = 900f;
+            int index = 0;
+
+            foreach (NPC npc in Main.ActiveNPCs)
             {
-                float minDist = 900f;
-                int index = 0;
-
-                foreach (NPC npc in Main.ActiveNPCs)
+                if (npc.CanBeChasedBy(Projectile, false) && npc != target)
                 {
-                    if (npc.CanBeChasedBy(Projectile, false) && npc != target)
-                    {
-                        float dist = (Projectile.position - npc.position).Length();
+                    float dist = (Projectile.position - npc.position).Length();
 
-                        if (dist < minDist)
-                        {
-                            minDist = dist;
-                            index = npc.whoAmI;
-                        }
+                    if (dist < minDist)
+                    {
+                        minDist = dist;
+                        index = npc.whoAmI;
                     }
                 }
+            }
 
-                Vector2 dartVelocity;
+            Vector2 dartVelocity;
+            Vector2 critDartVelocity;
 
+            if (hit.Crit)
+            {
+                if (minDist < 900f)
+                    dartVelocity = Main.npc[index].Center - Projectile.Center;
+                else
+                    dartVelocity = -Projectile.velocity;
+
+                critDartVelocity = Main.npc[index + 1].Center - Projectile.Center;
+                dartVelocity = Main.npc[index].Center - Projectile.Center;
+
+                dartVelocity.Normalize();
+                dartVelocity *= 10f;
+
+                critDartVelocity.Normalize();
+                critDartVelocity *= 20f;
+
+                Projectile.NewProjectile(
+                    Projectile.GetSource_FromThis(),
+                    Projectile.position,
+                    dartVelocity,
+                    ModContent.ProjectileType<AurpuraProj2>(),
+                    (int)(Projectile.damage * 1.1f),
+                    2,
+                    Main.myPlayer,
+                    0,
+                    0
+                );
+
+                Projectile.NewProjectile(
+                    Projectile.GetSource_FromThis(),
+                    Projectile.position,
+                    critDartVelocity,
+                    ModContent.ProjectileType<AurpuraProj2>(),
+                    Projectile.damage * 2,
+                    2,
+                    Main.myPlayer,
+                    0,
+                    0
+                );
+            }
+            else
+            {
                 if (minDist < 900f)
                     dartVelocity = Main.npc[index].Center - Projectile.Center;
                 else
@@ -84,19 +124,17 @@ namespace PlentyODarts.Content.Projectiles
                 dartVelocity.Normalize();
                 dartVelocity *= 20f;
 
-                int dartP = Projectile.NewProjectile(
+                int dart = Projectile.NewProjectile(
                     Projectile.GetSource_FromThis(),
                     Projectile.position,
                     dartVelocity,
                     ModContent.ProjectileType<AurpuraProj2>(),
                     (int)(Projectile.damage * 1.1f),
                     2,
-                    Projectile.owner,
+                    Main.myPlayer,
                     0,
                     0
                 );
-
-                //Main.projectile[dartP].aiStyle = 8;
             }
         }
 
@@ -171,7 +209,7 @@ namespace PlentyODarts.Content.Projectiles
             p.aiStyle = 1;
             p.timeLeft = 600;
 
-            p.penetrate = -1;
+            p.penetrate = 6;
             p.tileCollide = false;
             p.ignoreWater = false;
 

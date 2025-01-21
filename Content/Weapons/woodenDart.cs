@@ -60,8 +60,8 @@ namespace PlentyODarts.Content.Weapons
         public override void AddRecipes()
         {
             CreateRecipe(100)
-                .AddIngredient(RecipeGroupID.Wood, 5)
-                .AddIngredient(RecipeGroupID.IronBar, 1)
+                .AddRecipeGroup(RecipeGroupID.Wood, 5)
+                .AddRecipeGroup(RecipeGroupID.IronBar, 1)
                 .Register();
         }
     }

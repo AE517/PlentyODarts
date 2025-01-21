@@ -6,39 +6,37 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class Aurpura : ModItem, IDart
+    public class Marnum : ModItem, IDart
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.Format("Aurpura");
+            DisplayName.Format("Marnum");
         }
 
         public override void SetDefaults()
         {
-            Item i = Item;
+            Item.width = 40;
+            Item.height = 40;
 
-            i.width = 40;
-            i.height = 40;
+            Item.damage = 25;
+            Item.DamageType = DartDamage.Instance;
+            Item.knockBack = 7;
+            Item.crit = 10;
 
-            i.damage = 25;
-            i.DamageType = DartDamage.Instance;
-            i.knockBack = 7;
-            i.crit = 10;
+            Item.value = Item.sellPrice(0, 0, 2, 0);
+            Item.rare = ItemRarityID.Green;
 
-            i.value = Item.sellPrice(0, 0, 2, 0);
-            i.rare = ItemRarityID.Green;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+            Item.useAnimation = 12;
+            Item.useTime = 12;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.UseSound = SoundID.Item39;
 
-            i.noMelee = true;
-            i.noUseGraphic = true;
-            i.useAnimation = 12;
-            i.useTime = 12;
-            i.useStyle = ItemUseStyleID.Swing;
-            i.UseSound = SoundID.Item39;
-
-            i.consumable = false;
-            i.shoot = ModContent.ProjectileType<AurpuraProj>();
-            i.shootSpeed = 10;
-            i.maxStack = 1;
+            Item.consumable = false;
+            Item.shoot = ModContent.ProjectileType<MarnumProj>();
+            Item.shootSpeed = 10;
+            Item.maxStack = 1;
         }
 
         public override bool Shoot(
@@ -51,7 +49,7 @@ namespace PlentyODarts.Content.Weapons
             float knockback
         )
         {
-            IDart dart = new Aurpura();
+            IDart dart = new Marnum();
             dart.ApplyModus(
                 player.GetModPlayer<PoDPlayer>().currentModus,
                 player,
@@ -64,15 +62,15 @@ namespace PlentyODarts.Content.Weapons
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
-            damage += player.CountItem(ItemID.GoldOre) / 1000;
+            damage += player.CountItem(ItemID.PlatinumOre) / 1000;
         }
 
         public override void AddRecipes()
         {
             CreateRecipe(100)
                 .AddTile(ModContent.TileType<DartStationBasic>())
-                .AddIngredient(ItemID.Granite, 50)
-                .AddIngredient(ItemID.GoldBar)
+                .AddIngredient(ItemID.Marble, 50)
+                .AddIngredient(ItemID.PlatinumBar)
                 .Register();
         }
     }

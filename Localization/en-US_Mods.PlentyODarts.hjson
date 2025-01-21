@@ -113,6 +113,11 @@ Items: {
 		DisplayName: Aurpura
 		Tooltip: ""
 	}
+
+	Marnum: {
+		DisplayName: Marnum
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -127,4 +132,6 @@ Projectiles: {
 	OceanDartProj.DisplayName: Ocean Dart
 	AurpuraProj.DisplayName: Aurpura Proj
 	AurpuraProj2.DisplayName: Aurpura Proj2
+	MarnumGhost.DisplayName: Marnum Ghost
+	MarnumProj.DisplayName: Marnum Proj
 }

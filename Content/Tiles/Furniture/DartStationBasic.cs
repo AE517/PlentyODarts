@@ -38,6 +38,8 @@ namespace PlentyODarts.Content.Tiles.Furniture
             TileObjectData.newTile.Origin = new Point16(2, 2);
 
             TileObjectData.addTile(Type);
+
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("Basic Dart Station"));
         }
     }
 }
