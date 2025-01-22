@@ -50,14 +50,19 @@ namespace PlentyODarts.Content.Weapons
         )
         {
             IDart dart = new Marnum();
-            dart.ApplyModus(
-                player.GetModPlayer<PoDPlayer>().currentModus,
-                player,
-                position,
-                velocity
-            );
-
-            return false;
+            ModusType m = player.GetModPlayer<PoDPlayer>().currentModus;
+            if (m != ModusType.NONE)
+            {
+                dart.ApplyModus(
+                    player.GetModPlayer<PoDPlayer>().currentModus,
+                    player,
+                    position,
+                    velocity
+                );
+                return false;
+            }
+            else
+                return true;
         }
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)

@@ -22,8 +22,8 @@ namespace PlentyODarts.Content.Shift
 
         public override void SetDefaults()
         {
-            Item.height = 36;
-            Item.width = 36;
+            Item.height = 30;
+            Item.width = 22;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(0, 0, 1, 0);
             Item.accessory = true;

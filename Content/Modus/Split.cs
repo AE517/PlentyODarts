@@ -30,8 +30,8 @@ namespace PlentyODarts.Content.Modus
 
         public override void SetDefaults()
         {
-            Item.width = 64;
-            Item.height = 29;
+            Item.width = 32;
+            Item.height = 12;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(0, 0, 1, 0);
             Item.accessory = true;
