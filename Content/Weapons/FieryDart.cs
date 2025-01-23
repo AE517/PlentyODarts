@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class FieryDart : ModItem, IDart
+    public class FieryDart : DartWeapon
     {
         public override void SetStaticDefaults()
         {

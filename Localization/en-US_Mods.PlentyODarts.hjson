@@ -135,3 +135,20 @@ Projectiles: {
 	MarnumGhost.DisplayName: Marnum Ghost
 	MarnumProj.DisplayName: Marnum Proj
 }
+
+Prefixes: {
+	Pointy.DisplayName: Pointy
+	Mediocre.DisplayName: Mediocre
+	Maddened.DisplayName: Maddened
+	Hasty.DisplayName: Hasty
+	Disastrous.DisplayName: Disastrous
+	DartWeaponPrefix.DisplayName: Dart Weapon Prefix
+	Complex.DisplayName: Complex
+	Alegoric.DisplayName: Alegoric
+	Quintessential.DisplayName: Quintessential
+	Rebellious.DisplayName: Rebellious
+	Sharp.DisplayName: Sharp
+	Unbalanced.DisplayName: Unbalanced
+	Brute.DisplayName: Brute
+	Fierce.DisplayName: Fierce
+}

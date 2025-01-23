@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class Aurpura : ModItem, IDart
+    public class Aurpura : DartWeapon
     {
         public override void SetStaticDefaults()
         {

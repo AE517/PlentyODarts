@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class PoisonDart : ModItem, IDart
+    public class PoisonDart : DartWeapon
     {
         public override void SetStaticDefaults()
         {

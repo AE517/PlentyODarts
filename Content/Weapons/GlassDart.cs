@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class GlassDart : ModItem, IDart
+    public class GlassDart : DartWeapon
     {
         public override void SetStaticDefaults()
         {

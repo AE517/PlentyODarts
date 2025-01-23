@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class OceanDart : ModItem, IDart
+    public class OceanDart : DartWeapon
     {
         public override void SetStaticDefaults()
         {

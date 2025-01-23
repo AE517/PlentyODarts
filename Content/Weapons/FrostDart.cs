@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class FrostDart : ModItem, IDart
+    public class FrostDart : DartWeapon
     {
         public override void SetStaticDefaults()
         {

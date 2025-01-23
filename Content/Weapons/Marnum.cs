@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class Marnum : ModItem, IDart
+    public class Marnum : DartWeapon
     {
         public override void SetStaticDefaults()
         {
