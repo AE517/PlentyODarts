@@ -39,32 +39,6 @@ namespace PlentyODarts.Content.Weapons
             i.shootSpeed = 16;
         }
 
-        public override bool Shoot(
-            Player player,
-            Terraria.DataStructures.EntitySource_ItemUse_WithAmmo source,
-            Microsoft.Xna.Framework.Vector2 position,
-            Microsoft.Xna.Framework.Vector2 velocity,
-            int type,
-            int damage,
-            float knockback
-        )
-        {
-            IDart dart = new GlassDart();
-            ModusType m = player.GetModPlayer<PoDPlayer>().currentModus;
-            if (m != ModusType.NONE)
-            {
-                dart.ApplyModus(
-                    player.GetModPlayer<PoDPlayer>().currentModus,
-                    player,
-                    position,
-                    velocity
-                );
-                return false;
-            }
-            else
-                return true;
-        }
-
         public override void AddRecipes()
         {
             CreateRecipe(10).AddIngredient(ItemID.Glass).AddTile(TileID.GlassKiln).Register();

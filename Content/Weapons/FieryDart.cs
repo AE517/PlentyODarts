@@ -42,32 +42,6 @@ namespace PlentyODarts.Content.Weapons
             i.maxStack = 999;
         }
 
-        public override bool Shoot(
-            Player player,
-            EntitySource_ItemUse_WithAmmo source,
-            Vector2 position,
-            Vector2 velocity,
-            int type,
-            int damage,
-            float knockback
-        )
-        {
-            IDart dart = new FieryDart();
-            ModusType m = player.GetModPlayer<PoDPlayer>().currentModus;
-            if (m != ModusType.NONE)
-            {
-                dart.ApplyModus(
-                    player.GetModPlayer<PoDPlayer>().currentModus,
-                    player,
-                    position,
-                    velocity
-                );
-                return false;
-            }
-            else
-                return true;
-        }
-
         public override void PostUpdate()
         {
             Vector2 pos = new Vector2(Item.Center.X + 20, Item.Center.Y);

@@ -41,32 +41,6 @@ namespace PlentyODarts.Content.Weapons
             i.maxStack = 1;
         }
 
-        public override bool Shoot(
-            Player player,
-            Terraria.DataStructures.EntitySource_ItemUse_WithAmmo source,
-            Microsoft.Xna.Framework.Vector2 position,
-            Microsoft.Xna.Framework.Vector2 velocity,
-            int type,
-            int damage,
-            float knockback
-        )
-        {
-            IDart dart = new Aurpura();
-            ModusType m = player.GetModPlayer<PoDPlayer>().currentModus;
-            if (m != ModusType.NONE)
-            {
-                dart.ApplyModus(
-                    player.GetModPlayer<PoDPlayer>().currentModus,
-                    player,
-                    position,
-                    velocity
-                );
-                return false;
-            }
-            else
-                return true;
-        }
-
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
             damage += player.CountItem(ItemID.GoldOre) / 1000;

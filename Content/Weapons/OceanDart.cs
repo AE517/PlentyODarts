@@ -9,6 +9,8 @@ namespace PlentyODarts.Content.Weapons
 {
     public class OceanDart : DartWeapon
     {
+        public override bool isModusApplicable => false;
+
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Ocean Dart");

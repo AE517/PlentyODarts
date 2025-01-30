@@ -36,32 +36,6 @@ namespace PlentyODarts.Content.Weapons
             Item.shoot = ModContent.ProjectileType<PoisonDartProj>();
         }
 
-        public override bool Shoot(
-            Player player,
-            Terraria.DataStructures.EntitySource_ItemUse_WithAmmo source,
-            Microsoft.Xna.Framework.Vector2 position,
-            Microsoft.Xna.Framework.Vector2 velocity,
-            int type,
-            int damage,
-            float knockback
-        )
-        {
-            IDart dart = new PoisonDart();
-            ModusType m = player.GetModPlayer<PoDPlayer>().currentModus;
-            if (m != ModusType.NONE)
-            {
-                dart.ApplyModus(
-                    player.GetModPlayer<PoDPlayer>().currentModus,
-                    player,
-                    position,
-                    velocity
-                );
-                return false;
-            }
-            else
-                return true;
-        }
-
         public override void AddRecipes()
         {
             CreateRecipe(150)

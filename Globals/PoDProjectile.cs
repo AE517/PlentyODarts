@@ -9,16 +9,20 @@ namespace PlentyODarts.Globals
     {
         public override void AI(Projectile projectile)
         {
-            if (projectile.DamageType == DartDamage.Instance)
+            Player player = Main.LocalPlayer;
+            ShiftType shift = player.GetModPlayer<PoDPlayer>().currentShift;
+            if (shift != ShiftType.NONE)
             {
-                Player player = Main.LocalPlayer;
-                ShiftType shift = player.GetModPlayer<PoDPlayer>().currentShift;
-
-                int S = shift switch
+                switch (shift)
                 {
-                    ShiftType.HYPERSPEED => new HyperSpeed().Shift(projectile, player),
-                    _ => 0,
-                };
+                    case ShiftType.HYPERSPEED:
+                    {
+                        new HyperSpeed().Shift(projectile, player);
+                        break;
+                    }
+                    default:
+                        break;
+                }
             }
         }
     }
