@@ -36,7 +36,7 @@ namespace PlentyODarts.Content.Weapons
             i.consumable = true;
             i.maxStack = 999;
             i.shoot = ModContent.ProjectileType<GlassDartProj>();
-            i.shootSpeed = 16;
+            i.shootSpeed = 13;
         }
 
         public override void AddRecipes()

@@ -9,7 +9,7 @@ namespace PlentyODarts.Content.Weapons
 {
     public class OceanDart : DartWeapon
     {
-        public override bool isModusApplicable => false;
+        protected override bool IsModusApplicable => false;
 
         public override void SetStaticDefaults()
         {

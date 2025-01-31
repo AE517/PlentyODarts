@@ -5,14 +5,14 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Modus
 {
-    public class Split : ModItem, IModus
+    public class SplitModus : DartModus
     {
-        public int Modus(Player player, Vector2 position, Vector2 velocity)
+        public override int Modus(Player player, Vector2 position, Vector2 velocity)
         {
             for (int i = -1; i <= 1; i += 2)
             {
-                Projectile.NewProjectile(
-                    player.GetSource_FromThis(),
+                int p1 = ModusProjectile(
+                    player,
                     position,
                     velocity * i,
                     player.HeldItem.shoot,
@@ -22,7 +22,10 @@ namespace PlentyODarts.Content.Modus
             }
             return 0;
         }
+    }
 
+    public class Split : ModItem
+    {
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Modus - Split");
@@ -39,7 +42,7 @@ namespace PlentyODarts.Content.Modus
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<PoDPlayer>().currentModus = ModusType.SPLIT;
+            player.GetModPlayer<PoDPlayer>().SetModus(new SplitModus());
         }
     }
 }

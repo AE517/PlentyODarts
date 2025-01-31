@@ -76,7 +76,7 @@ Items: {
 		Tooltip:
 			'''
 			Increase overral Dart Speed at the cost of it's Damage.
-			Only one type of Shift can be equipped.
+			Only one type of 'Shift' can be equipped.
 
 			[c/69B595:"ZOOOOOOOM!"]
 			'''
@@ -111,12 +111,26 @@ Items: {
 
 	Aurpura: {
 		DisplayName: Aurpura
-		Tooltip: ""
+		Tooltip:
+			'''
+			Throws a Dark Golden Dart that on collision will launch another golden dart at the nearest enemy.
+			Aurpura can pierce one enemy before breaking, the golden dart goes after it's target regardless of
+			terrain.
+			Critical hits makes Aurpura target one additional enemy.
+
+			[c/69B595:"Truly a very elegant combination..."]
+			'''
 	}
 
 	Marnum: {
 		DisplayName: Marnum
-		Tooltip: ""
+		Tooltip:
+			'''
+			Throws a Marbled Platinum Dart that will bounce on terrain.
+			Upon hitting enemies it will dissapear creating a bouncy after-image.
+
+			[c/69B595:"Makes me wonder... Can ghosts throw darts too?"]
+			'''
 	}
 }
 
@@ -130,10 +144,10 @@ Projectiles: {
 	GlassDartShardProj.DisplayName: Glass Shard
 	OceanDart2Proj.DisplayName: Fiery Ocean Dart
 	OceanDartProj.DisplayName: Ocean Dart
-	AurpuraProj.DisplayName: Aurpura Proj
-	AurpuraProj2.DisplayName: Aurpura Proj2
+	AurpuraProj.DisplayName: Aurpura Dart
+	AurpuraProj2.DisplayName: Aurpura Dart
 	MarnumGhost.DisplayName: Marnum Ghost
-	MarnumProj.DisplayName: Marnum Proj
+	MarnumProj.DisplayName: Marnum Dart
 }
 
 Prefixes: {

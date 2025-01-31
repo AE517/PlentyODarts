@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using PlentyODarts.Content.Modus;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -7,10 +6,12 @@ namespace PlentyODarts.Content
 {
     public abstract class DartWeapon : ModItem
     {
-        public virtual bool isModusApplicable => true;
+        protected virtual bool IsModusApplicable => true;
 
+        //Ensures Reforge prefixes to actually work also including the Dart class directed ones;
         public override bool WeaponPrefix() => true;
 
+        //Despite being a Throwing based class it does not benefits from ranged prefixes;
         public override bool RangedPrefix() => false;
 
         public override bool Shoot(
@@ -23,27 +24,17 @@ namespace PlentyODarts.Content
             float knockback
         )
         {
-            ModusType modus = player.GetModPlayer<PoDPlayer>().currentModus;
-            if (isModusApplicable)
+            if (IsModusApplicable)
             {
-                return applyModus(modus, player, position, velocity);
+                return ApplyModus(player, position, velocity);
             }
             return true;
         }
 
-        public bool applyModus(ModusType modus, Player player, Vector2 position, Vector2 velocity)
+        private static bool ApplyModus(Player player, Vector2 position, Vector2 velocity)
         {
-            switch (modus)
-            {
-                case ModusType.SPLIT:
-                {
-                    new Split().Modus(player, position, velocity);
-                    return false;
-                }
-
-                default:
-                    return true;
-            }
+            return player.GetModPlayer<PoDPlayer>().CurrentModus.Modus(player, position, velocity)
+                != 0;
         }
     }
 }

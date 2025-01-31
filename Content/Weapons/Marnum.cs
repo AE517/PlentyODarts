@@ -46,7 +46,7 @@ namespace PlentyODarts.Content.Weapons
 
         public override void AddRecipes()
         {
-            CreateRecipe(100)
+            CreateRecipe()
                 .AddTile(ModContent.TileType<DartStationBasic>())
                 .AddIngredient(ItemID.Marble, 50)
                 .AddIngredient(ItemID.PlatinumBar)
