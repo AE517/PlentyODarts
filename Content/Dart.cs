@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using PlentyODarts.Utils;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -51,6 +52,41 @@ namespace PlentyODarts.Content
         {
             return player.GetModPlayer<PoDPlayer>().CurrentModus.Modus(player, position, velocity)
                 != 0;
+        }
+
+        public override void ModifyShootStats(
+            Player player,
+            ref Vector2 position,
+            ref Vector2 velocity,
+            ref int type,
+            ref int damage,
+            ref float knockback
+        )
+        {
+            ExtraStats(player, ref position, ref velocity, ref type, ref damage, ref knockback);
+        }
+
+        public virtual void ExtraStats(
+            Player player,
+            ref Vector2 position,
+            ref Vector2 velocity,
+            ref int type,
+            ref int damage,
+            ref float knockback
+        )
+        {
+            DamageUtils modifier = new DamageUtils();
+            damage = damage + (int)(damage * modifier.DamageMod());
+        }
+
+        public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
+        {
+            DamageUtils modifier = new DamageUtils();
+            float bonus = modifier.DamageMod();
+            tooltips.Add(
+                new TooltipLine(Mod, "FeatOfWonderCounter", $"Feats of Wonder: {modifier.mod}")
+            );
+            tooltips.Add(new TooltipLine(Mod, "FeatOfWonderModifier", $"Damage bonus: {bonus}%"));
         }
     }
 }

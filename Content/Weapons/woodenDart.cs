@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework;
-using PlentyODarts.Content.Modus;
 using PlentyODarts.Content.Projectiles;
 using Terraria;
 using Terraria.ID;
