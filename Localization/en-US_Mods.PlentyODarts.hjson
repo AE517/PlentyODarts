@@ -132,6 +132,11 @@ Items: {
 			[c/69B595:"Makes me wonder... Can ghosts throw darts too?"]
 			'''
 	}
+
+	ObsidianDart: {
+		DisplayName: Obsidian Dart
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -148,6 +153,7 @@ Projectiles: {
 	AurpuraProj2.DisplayName: Aurpura Dart
 	MarnumGhost.DisplayName: Marnum Ghost
 	MarnumProj.DisplayName: Marnum Dart
+	ObsidianDartProj.DisplayName: Obsidian Dart Proj
 }
 
 Prefixes: {

@@ -6,25 +6,25 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Weapons
 {
-    public class Marnum : DartWeapon
+    public class ObsidianDart : DartWeapon
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.Format("Marnum");
+            DisplayName.Format("Obsidian Dart");
         }
 
         public override void SetDefaults()
         {
-            Item.width = 40;
             Item.height = 40;
+            Item.width = 40;
 
-            Item.damage = 25;
+            Item.damage = 17;
             Item.DamageType = DartDamage.Instance;
-            Item.knockBack = 7;
-            Item.crit = 10;
+            Item.knockBack = 6;
+            Item.crit = 5;
 
-            Item.value = Item.sellPrice(0, 0, 2, 0);
-            Item.rare = ItemRarityID.Green;
+            Item.value = Item.sellPrice(0, 0, 1, 0);
+            Item.rare = ItemRarityID.Blue;
 
             Item.noMelee = true;
             Item.noUseGraphic = true;
@@ -33,23 +33,22 @@ namespace PlentyODarts.Content.Weapons
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item39;
 
-            Item.consumable = false;
-            Item.shoot = ModContent.ProjectileType<MarnumProj>();
+            Item.consumable = true;
+            Item.shoot = ModContent.ProjectileType<ObsidianDartProj>();
             Item.shootSpeed = 10;
-            Item.maxStack = 1;
+            Item.maxStack = 999;
         }
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
-            damage += player.CountItem(ItemID.PlatinumOre) / 1000;
+            damage += player.CountItem(ItemID.Obsidian) / 1000;
         }
 
         public override void AddRecipes()
         {
-            CreateRecipe()
+            CreateRecipe(25)
                 .AddTile(ModContent.TileType<DartStationBasic>())
-                .AddIngredient(ItemID.Marble, 25)
-                .AddIngredient(ItemID.PlatinumBar)
+                .AddIngredient(ItemID.Obsidian, 5)
                 .Register();
         }
     }
