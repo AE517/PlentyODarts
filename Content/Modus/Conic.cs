@@ -5,16 +5,16 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Modus
 {
-    public class Split : DartModus
+    public class Conic : DartModus
     {
         public override int Modus(Player player, Vector2 position, Vector2 velocity)
         {
-            for (int i = -1; i <= 1; i += 2)
+            for (int i = -1; i <= 1; i++)
             {
-                int p1 = ModusProjectile(
+                int p = ModusProjectile(
                     player,
                     position,
-                    velocity * i,
+                    velocity.RotatedBy(i * 0.2f),
                     player.HeldItem.shoot,
                     player.HeldItem.damage,
                     player.HeldItem.knockBack
@@ -25,13 +25,13 @@ namespace PlentyODarts.Content.Modus
 
         public override void SetStaticDefaults()
         {
-            DisplayName.Format("Modus - Split");
+            DisplayName.Format("Modus - Conic");
         }
 
         public override void SetDefaults()
         {
-            Item.width = 32;
-            Item.height = 12;
+            Item.width = 22;
+            Item.height = 22;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(0, 0, 1, 0);
             Item.accessory = true;
@@ -39,7 +39,7 @@ namespace PlentyODarts.Content.Modus
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<PoDPlayer>().SetModus(new Split());
+            player.GetModPlayer<PoDPlayer>().SetModus(new Conic());
         }
     }
 }

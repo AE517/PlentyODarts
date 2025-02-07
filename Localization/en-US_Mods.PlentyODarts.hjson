@@ -12,7 +12,6 @@ Items: {
 			'''
 			Critical hits makes a star fall from the sky...
 			Yes, even at daytime...
-
 			[c/69B595:"A fragment of the stars"]
 			'''
 	}
@@ -22,7 +21,6 @@ Items: {
 		Tooltip:
 			'''
 			Critical Hits leaves the target poisoned regardless of immunities.
-
 			[c/69B595:"It Stings!"]
 			'''
 	}
@@ -42,6 +40,7 @@ Items: {
 		Tooltip:
 			'''
 			Critical Hits renders the target on fire regardless of immunities.
+			Fades quickly in cold environments.
 			[c/69B595: "Hot! HOT!!!"]
 			'''
 	}
@@ -50,10 +49,9 @@ Items: {
 		DisplayName: Glass Dart
 		Tooltip:
 			'''
+			Critical hits or hitting terrain launch glass shards.
+			[c/ff0000:Glass shards also harms allies].
 			Critical Hits inflicts Bleeding regardless of target immunities. 
-			Additionally, upon hitting the ground or inflicting critical hits,
-			an unpredictable amount of shards will spread causing damage to ANYONE
-			around, also inflicting bleeding.
 			Shards do bonus damage to already bleeding targets.
 
 			[c/69B595:"Now why would even use such thing???"]
@@ -87,7 +85,6 @@ Items: {
 		Tooltip:
 			'''
 			Can be used to make more complex darts.
-
 			[c/69B595:"Every Dartmaster has a certain kind of industriousness..."]
 			'''
 	}
@@ -117,6 +114,7 @@ Items: {
 			Aurpura can pierce one enemy before breaking, the golden dart goes after it's target regardless of
 			terrain.
 			Critical hits makes Aurpura target one additional enemy.
+			Deals additional damage based on how much gold ores are with you.
 
 			[c/69B595:"Truly a very elegant combination..."]
 			'''
@@ -128,6 +126,7 @@ Items: {
 			'''
 			Throws a Marbled Platinum Dart that will bounce on terrain.
 			Upon hitting enemies it will dissapear creating a bouncy after-image.
+			Deals additional damage bases on how much platinum ores are with you.
 
 			[c/69B595:"Makes me wonder... Can ghosts throw darts too?"]
 			'''
@@ -135,7 +134,27 @@ Items: {
 
 	ObsidianDart: {
 		DisplayName: Obsidian Dart
-		Tooltip: ""
+		Tooltip:
+			'''
+			Upon hitting lava it will get repelled becoming charged.
+			Charged attacks critically hits and
+			explode on contact burning enemies regardless of immunities.
+			Having [c/FF0000:"Lava buckets"] produces the same effect but at a
+			weaker rate.
+
+			[c/69B595:"Ya like playin' with fire, eh?"]
+			'''
+	}
+
+	Conic: {
+		DisplayName: Modus - Conic
+		Tooltip:
+			'''
+			Alters the properties of the equiped Dart to triple itself in a cone.
+			Only one type of 'Modus' can be equiped.
+
+			[c/69B595:"Traffic? What's this?..."]
+			'''
 	}
 }
 
@@ -153,7 +172,7 @@ Projectiles: {
 	AurpuraProj2.DisplayName: Aurpura Dart
 	MarnumGhost.DisplayName: Marnum Ghost
 	MarnumProj.DisplayName: Marnum Dart
-	ObsidianDartProj.DisplayName: Obsidian Dart Proj
+	ObsidianDartProj.DisplayName: Obsidian Dart
 }
 
 Prefixes: {

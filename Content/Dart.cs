@@ -79,14 +79,14 @@ namespace PlentyODarts.Content
             damage = damage + (int)(damage * modifier.DamageMod());
         }
 
-        public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
-        {
-            DamageUtils modifier = new DamageUtils();
-            float bonus = modifier.DamageMod();
-            tooltips.Add(
-                new TooltipLine(Mod, "FeatOfWonderCounter", $"Feats of Wonder: {modifier.mod}")
-            );
-            tooltips.Add(new TooltipLine(Mod, "FeatOfWonderModifier", $"Damage bonus: {bonus}%"));
-        }
+        // public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
+        // {
+        //     DamageUtils modifier = new DamageUtils();
+        //     float bonus = modifier.DamageMod();
+        //     tooltips.Add(
+        //         new TooltipLine(Mod, "FeatOfGrandeurCounter", $"Feats of Grandeur: {modifier.mod}")
+        //     );
+        //     tooltips.Add(new TooltipLine(Mod, "FeatOfGrandeurModifier", $"Damage bonus: {bonus}%"));
+        // }
     }
 }

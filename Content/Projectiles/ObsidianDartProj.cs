@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -44,26 +45,12 @@ namespace PlentyODarts.Content.Projectiles
 
         public override bool OnTileCollide(Microsoft.Xna.Framework.Vector2 oldVelocity)
         {
-            if (charged && !Projectile.lavaWet)
-            {
-                Projectile.Kill();
-                SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
-                Rectangle rect = new Rectangle(
-                    (int)Projectile.Center.X - 75,
-                    (int)Projectile.Center.Y - 75,
-                    100,
-                    100
-                );
-                Array.ForEach(
-                    Main.npc,
-                    npc =>
-                    {
-                        if (npc.Hitbox.Intersects(rect))
-                            npc.SimpleStrikeNPC(Projectile.damage, 1);
-                    }
-                );
-                makeSmoke();
-            }
+            if (charged)
+                explode(Projectile.damage, 75, 75);
+
+            if (Main.player[Projectile.owner].HasItem(ItemID.LavaBucket))
+                explode(Projectile.damage / 2, 50, 50);
+
             Projectile.Kill();
             return false;
         }
@@ -73,12 +60,19 @@ namespace PlentyODarts.Content.Projectiles
             target.AddBuff(BuffID.OnFire, 600);
             if (charged)
             {
-                hit.Crit = true;
-                explode((int)(Projectile.damage * 1.5f), 150);
+                explode((int)(Projectile.damage * 1.5f), 150, 150);
             }
 
             if (Main.LocalPlayer.HasItem(ItemID.LavaBucket))
-                explode((int)(Projectile.damage * 0.9f), 50);
+                explode((int)(Projectile.damage * 0.9f), 50, 50);
+        }
+
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+        {
+            if (charged)
+            {
+                modifiers.SetCrit();
+            }
         }
 
         public override void AI()
@@ -99,15 +93,16 @@ namespace PlentyODarts.Content.Projectiles
                         : Projectile.velocity.Y;
             }
 
-            Projectile.damage += charged ? 2 : 0;
-
-            Player player = Main.LocalPlayer;
+            Player player = Main.player[Projectile.owner];
             if (charged || player.HasItem(ItemID.LavaBucket))
+                Lighting.AddLight(Projectile.Center, Color.OrangeRed.ToVector3());
+
+            if (charged)
             {
                 int dust = Dust.NewDust(
-                    Projectile.position,
-                    2,
-                    2,
+                    Projectile.oldPosition,
+                    1,
+                    1,
                     DustID.Torch,
                     Projectile.velocity.X,
                     Projectile.velocity.Y,
@@ -115,18 +110,54 @@ namespace PlentyODarts.Content.Projectiles
                     default,
                     1
                 );
+                // Main.dust[dust].noGravity = true;
+                Main.dust[dust].velocity *= Main.rand.NextFloat(-0.4f, 0.4f);
+                Main.dust[dust].noLight = true;
             }
         }
 
-        void explode(int damage, int area)
+        public override void PostDraw(Color lightColor)
+        {
+            Texture2D texture = ModContent
+                .Request<Texture2D>(
+                    "PlentyODarts/Content/Projectiles/Glowmasks/ObsidianDartProj_Glow",
+                    ReLogic.Content.AssetRequestMode.ImmediateLoad
+                )
+                .Value;
+
+            Vector2 p = new Vector2(
+                Projectile.Center.X - Main.screenPosition.X,
+                Projectile.Center.Y - Main.screenPosition.Y
+            );
+
+            if (charged || Main.player[Projectile.owner].HasItem(ItemID.LavaBucket))
+            {
+                DrawOriginOffsetY = -10;
+                Main.EntitySpriteDraw(
+                    texture,
+                    p,
+                    new Rectangle(0, 0, texture.Width, texture.Height),
+                    Color.White,
+                    Projectile.rotation,
+                    texture.Size() * .5f,
+                    1f,
+                    (Projectile.spriteDirection != 1)
+                        ? SpriteEffects.FlipHorizontally
+                        : SpriteEffects.None,
+                    0f
+                );
+            }
+        }
+
+        void explode(int damage, int width, int height)
         {
             SoundEngine.PlaySound(SoundID.Item89, Projectile.position);
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
             Rectangle rect = new Rectangle(
-                (int)Projectile.Center.X - area,
-                (int)Projectile.Center.Y - area,
-                100,
-                100
+                (int)Projectile.Center.X - width / 2,
+                (int)Projectile.Center.Y - height / 2,
+                width,
+                height
             );
             Array.ForEach(
                 Main.npc,
@@ -141,6 +172,24 @@ namespace PlentyODarts.Content.Projectiles
                 }
             );
             makeSmoke();
+            for (int i = 0; i <= 20; i++)
+            {
+                Vector2 v = new Vector2(
+                    Main.rand.NextFloat(-2f, 2f) * 5,
+                    Main.rand.NextFloat(-2f, 2f) * 5
+                );
+
+                Dust d = Dust.NewDustPerfect(
+                    Projectile.Center,
+                    DustID.Torch,
+                    v,
+                    0,
+                    default,
+                    Main.rand.NextFloat(.9f, 1.5f)
+                );
+
+                d.noGravity = true;
+            }
         }
 
         void makeSmoke()
