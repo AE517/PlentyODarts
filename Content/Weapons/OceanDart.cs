@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework;
-using PlentyODarts.Content.Modus;
 using PlentyODarts.Content.Projectiles;
 using Terraria;
 using Terraria.ID;
@@ -25,7 +23,7 @@ namespace PlentyODarts.Content.Weapons
             Item.useAnimation = 20;
             Item.consumable = true;
             Item.knockBack = 10f;
-            Item.damage = 25;
+            Item.damage = 20;
             Item.crit = 3;
             Item.value = Item.buyPrice(0, 0, 0, 50);
             Item.UseSound = SoundID.Item39;

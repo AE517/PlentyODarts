@@ -20,7 +20,7 @@ namespace PlentyODarts.Content.Weapons
             i.width = 40;
             i.height = 40;
 
-            i.damage = 25;
+            i.damage = 20;
             i.DamageType = DartDamage.Instance;
             i.knockBack = 7;
             i.crit = 10;

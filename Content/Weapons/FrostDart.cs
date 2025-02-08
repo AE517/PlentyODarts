@@ -20,7 +20,7 @@ namespace PlentyODarts.Content.Weapons
             i.width = 32;
             i.height = 32;
 
-            i.damage = 15;
+            i.damage = 14;
             i.DamageType = DartDamage.Instance;
             i.knockBack = 3;
             i.crit = 3;
@@ -85,7 +85,6 @@ namespace PlentyODarts.Content.Weapons
         public override void AddRecipes()
         {
             CreateRecipe(200)
-                .AddIngredient(ModContent.ItemType<WoodenDart>(), 50)
                 .AddIngredient(ItemID.IceBlock, 10)
                 .AddTile(TileID.IceMachine)
                 .Register();

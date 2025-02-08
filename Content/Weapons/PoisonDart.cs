@@ -26,7 +26,7 @@ namespace PlentyODarts.Content.Weapons
             Item.useTime = 15;
             Item.useAnimation = 15;
             Item.DamageType = DartDamage.Instance;
-            Item.damage = 20;
+            Item.damage = 13;
             Item.knockBack = 4;
             Item.value = Item.buyPrice(0, 0, 0, 70);
             Item.crit = 5;
