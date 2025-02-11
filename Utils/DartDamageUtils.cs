@@ -1,3 +1,4 @@
+using System;
 using Terraria;
 
 namespace PlentyODarts.Utils
@@ -27,6 +28,12 @@ namespace PlentyODarts.Utils
 
             float avg = mod / (float)16;
             return avg;
+        }
+
+        public float GemDartMod(int gemCount, float damageCap)
+        {
+            float bonus = gemCount * 0.5f;
+            return Math.Min(gemCount, damageCap);
         }
     }
 }

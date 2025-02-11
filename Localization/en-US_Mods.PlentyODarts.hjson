@@ -156,6 +156,16 @@ Items: {
 			[c/69B595:"Traffic? What's this?..."]
 			'''
 	}
+
+	AmethystDart: {
+		DisplayName: Amethyst Dart
+		Tooltip: ""
+	}
+
+	SapphireDart: {
+		DisplayName: Sapphire Dart
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -173,6 +183,8 @@ Projectiles: {
 	MarnumGhost.DisplayName: Marnum Ghost
 	MarnumProj.DisplayName: Marnum Dart
 	ObsidianDartProj.DisplayName: Obsidian Dart
+	AmethystDartProj.DisplayName: Amethyst Dart Proj
+	SapphireDartProj.DisplayName: Sapphire Dart Proj
 }
 
 Prefixes: {

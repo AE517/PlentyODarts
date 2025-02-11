@@ -30,8 +30,8 @@ namespace PlentyODarts.Content.Weapons
 
             i.noMelee = true;
             i.noUseGraphic = true;
-            i.useAnimation = 12;
-            i.useTime = 12;
+            i.useAnimation = 17;
+            i.useTime = 17;
             i.useStyle = ItemUseStyleID.Swing;
             i.UseSound = SoundID.Item39;
 
