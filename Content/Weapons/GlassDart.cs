@@ -26,6 +26,7 @@ namespace PlentyODarts.Content.Weapons
             i.width = 29;
             i.height = 64;
             i.scale = 1;
+            i.rare = ItemRarityID.White;
 
             i.useStyle = ItemUseStyleID.Swing;
             i.useTime = 15;

@@ -27,7 +27,7 @@ namespace PlentyODarts.Content.Weapons
             Item.crit = 3;
             Item.value = Item.buyPrice(0, 0, 0, 50);
             Item.UseSound = SoundID.Item39;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.Blue;
             Item.maxStack = 999;
             Item.noMelee = true;
             Item.noUseGraphic = true;

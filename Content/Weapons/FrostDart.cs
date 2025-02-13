@@ -37,7 +37,7 @@ namespace PlentyODarts.Content.Weapons
             i.consumable = true;
             i.maxStack = 999;
 
-            i.rare = ItemRarityID.Green;
+            i.rare = ItemRarityID.White;
             i.value = Item.buyPrice(0, 0, 0, 50);
         }
 

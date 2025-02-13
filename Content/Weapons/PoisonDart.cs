@@ -18,7 +18,7 @@ namespace PlentyODarts.Content.Weapons
             Item.width = 32;
             Item.height = 32;
             Item.scale = 1;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.White;
             Item.noMelee = true;
             Item.noUseGraphic = true;
             Item.UseSound = SoundID.Item39;
