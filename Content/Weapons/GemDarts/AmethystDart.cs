@@ -36,7 +36,7 @@ namespace PlentyODarts.Content.Weapons.GemDarts
 
             Item.consumable = true;
             Item.shoot = ModContent.ProjectileType<AmethystDartProj>();
-            Item.shootSpeed = 10;
+            Item.shootSpeed = 8;
             Item.maxStack = 999;
         }
 

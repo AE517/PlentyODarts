@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Modus
 {
@@ -14,7 +13,7 @@ namespace PlentyODarts.Content.Modus
                 int p = ModusProjectile(
                     player,
                     position,
-                    velocity.RotatedBy(i * 0.2f),
+                    velocity.RotatedBy(i * 0.3f),
                     player.HeldItem.shoot,
                     player.HeldItem.damage,
                     player.HeldItem.knockBack

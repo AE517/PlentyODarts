@@ -227,15 +227,6 @@ namespace PlentyODarts.Content.Projectiles
                     Main.rand.Next(GoreID.Smoke1, GoreID.Smoke3 + 1)
                 );
                 smokeGore.velocity *= speedMulti;
-                smokeGore.velocity.X += 1f;
-                smokeGore.velocity.Y -= 1f;
-                smokeGore = Gore.NewGoreDirect(
-                    Projectile.GetSource_Death(),
-                    Projectile.position,
-                    default,
-                    Main.rand.Next(GoreID.Smoke1, GoreID.Smoke3 + 1)
-                );
-                smokeGore.velocity *= speedMulti;
                 smokeGore.velocity -= Vector2.One;
             }
         }

@@ -159,12 +159,79 @@ Items: {
 
 	AmethystDart: {
 		DisplayName: Amethyst Dart
-		Tooltip: ""
+		Tooltip:
+			'''
+			The more [c/9966cc:Amethysts] with you, the higher the damage this dart does
+			up to a max of 50.
+
+			[c/69B595:"GOOD!"]
+			'''
 	}
 
 	SapphireDart: {
 		DisplayName: Sapphire Dart
-		Tooltip: ""
+		Tooltip:
+			'''
+			The more [c/0F52BA:Sapphires] with you, the higher the damage this dart does
+			up to a max of 70.
+
+			[c/69B595:"AWESOME!"]
+			'''
+	}
+
+	AmberDart: {
+		DisplayName: Amber Dart
+		Tooltip:
+			'''
+			The more [c/E6AC00:Ambers] with you, the higher the damage this dart does
+			up to a max of 90.
+
+			[c/69B595:"PHENOMENAL!"]
+			'''
+	}
+
+	DiamondDart: {
+		DisplayName: Diamond Dart
+		Tooltip:
+			'''
+			The more [c/B9F2FF:Diamonds] with you, the higher the damage this dart does
+			up to a max of 120.
+
+			[c/69B595:"UNBELIEVABLE!!!"]
+			'''
+	}
+
+	EmeraldDart: {
+		DisplayName: Emerald Dart
+		Tooltip:
+			'''
+			The more [c/50C878:Emeralds] with you, the higher the damage this dart does
+			up to a max of 80.
+
+			[c/69B595:"SPECTACULAR!"]
+			'''
+	}
+
+	RubyDart: {
+		DisplayName: Ruby Dart
+		Tooltip:
+			'''
+			The more [c/E10531:Rubies] with you, the higher the damage this dart does
+			up to a max of 90.
+
+			[c/69B595:"EXTRAORDINARY!"]
+			'''
+	}
+
+	TopazDart: {
+		DisplayName: Topaz Dart
+		Tooltip:
+			'''
+			The more [c/50C878:Topaz] with you, the higher the damage this dart does
+			up to a max of 60.
+
+			[c/69B595:"EXCELENT!"]
+			'''
 	}
 }
 
@@ -185,6 +252,11 @@ Projectiles: {
 	ObsidianDartProj.DisplayName: Obsidian Dart
 	AmethystDartProj.DisplayName: Amethyst Dart Proj
 	SapphireDartProj.DisplayName: Sapphire Dart Proj
+	AmberDartProj.DisplayName: Amber Dart Proj
+	DiamondDartProj.DisplayName: Diamond Dart Proj
+	EmeraldDartProj.DisplayName: Emerald Dart Proj
+	RubyDartProj.DisplayName: Ruby Dart Proj
+	TopazDartProj.DisplayName: Topaz Dart Proj
 }
 
 Prefixes: {

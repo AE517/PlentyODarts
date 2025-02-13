@@ -33,7 +33,7 @@ namespace PlentyODarts.Content.Weapons
             i.UseSound = SoundID.Item39;
 
             i.value = Item.sellPrice(0, 0, 0, 50);
-            i.rare = ItemRarityID.Green;
+            i.rare = ItemRarityID.White;
 
             i.consumable = true;
             i.shoot = ModContent.ProjectileType<FieryDartProj>();

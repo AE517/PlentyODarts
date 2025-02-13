@@ -1,3 +1,5 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using PlentyODarts.Content.Projectiles;
 using PlentyODarts.Content.Tiles.Furniture;
 using Terraria;
@@ -42,6 +44,82 @@ namespace PlentyODarts.Content.Weapons
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
             damage += player.CountItem(ItemID.Obsidian) / 1000;
+        }
+
+        public override void PostDrawInWorld(
+            SpriteBatch spriteBatch,
+            Color lightColor,
+            Color alphaColor,
+            float rotation,
+            float scale,
+            int whoAmI
+        )
+        {
+            Player player = Main.LocalPlayer;
+
+            Texture2D texture = ModContent
+                .Request<Texture2D>(
+                    "PlentyODarts/Content/Weapons/ObsidianDart_Glow",
+                    ReLogic.Content.AssetRequestMode.ImmediateLoad
+                )
+                .Value;
+
+            if (player.HasItem(ItemID.LavaBucket))
+            {
+                Vector2 pos = new Vector2(
+                    Item.Center.X - Main.screenPosition.X,
+                    Item.Center.Y - Main.screenPosition.Y
+                );
+
+                spriteBatch.Draw(
+                    texture,
+                    pos,
+                    new Rectangle(0, 0, texture.Width, texture.Height),
+                    new Color(1f, 1f, 1f, .5f),
+                    rotation,
+                    texture.Size() * .5f,
+                    1f,
+                    SpriteEffects.None,
+                    1f
+                );
+
+                Lighting.AddLight(Item.position, Color.OrangeRed.ToVector3());
+            }
+        }
+
+        public override void PostDrawInInventory(
+            Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch,
+            Microsoft.Xna.Framework.Vector2 position,
+            Microsoft.Xna.Framework.Rectangle frame,
+            Microsoft.Xna.Framework.Color drawColor,
+            Microsoft.Xna.Framework.Color itemColor,
+            Microsoft.Xna.Framework.Vector2 origin,
+            float scale
+        )
+        {
+            Player player = Main.LocalPlayer;
+
+            Texture2D texture = ModContent
+                .Request<Texture2D>(
+                    "PlentyODarts/Content/Weapons/ObsidianDartInv_Glow",
+                    ReLogic.Content.AssetRequestMode.ImmediateLoad
+                )
+                .Value;
+
+            if (player.HasItem(ItemID.LavaBucket))
+            {
+                spriteBatch.Draw(
+                    texture,
+                    position,
+                    new Rectangle(0, 0, texture.Width, texture.Height),
+                    new Color(1f, 1f, 1f, .5f),
+                    0f,
+                    texture.Size() * .5f,
+                    1f,
+                    SpriteEffects.None,
+                    0f
+                );
+            }
         }
 
         public override void AddRecipes()
