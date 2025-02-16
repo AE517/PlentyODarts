@@ -34,10 +34,10 @@ namespace PlentyODarts.Content.Weapons.GemDarts
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item39;
 
-            Item.consumable = true;
+            // Item.consumable = true;
             Item.shoot = ModContent.ProjectileType<TopazDartProj>();
             Item.shootSpeed = 8;
-            Item.maxStack = 999;
+            // Item.maxStack = 999;
         }
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
@@ -50,9 +50,9 @@ namespace PlentyODarts.Content.Weapons.GemDarts
 
         public override void AddRecipes()
         {
-            CreateRecipe(20)
+            CreateRecipe()
                 .AddTile(ModContent.TileType<DartStationBasic>())
-                .AddIngredient(ItemID.Topaz, 1)
+                .AddIngredient(ItemID.Topaz, 5)
                 .Register();
         }
     }

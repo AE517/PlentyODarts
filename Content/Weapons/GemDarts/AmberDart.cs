@@ -34,10 +34,10 @@ namespace PlentyODarts.Content.Weapons.GemDarts
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item39;
 
-            Item.consumable = true;
+            // Item.consumable = true;
             Item.shoot = ModContent.ProjectileType<AmberDartProj>();
             Item.shootSpeed = 13;
-            Item.maxStack = 999;
+            // Item.maxStack = 999;
         }
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)

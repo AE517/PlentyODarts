@@ -16,8 +16,8 @@ namespace PlentyODarts.Content.Weapons.GemDarts
 
         public override void SetDefaults()
         {
-            Item.width = 40;
-            Item.height = 40;
+            Item.width = 50;
+            Item.height = 50;
 
             Item.damage = 23;
             Item.crit = 4;
@@ -34,10 +34,10 @@ namespace PlentyODarts.Content.Weapons.GemDarts
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item39;
 
-            Item.consumable = true;
+            // Item.consumable = true;
             Item.shoot = ModContent.ProjectileType<DiamondDartProj>();
             Item.shootSpeed = 14;
-            Item.maxStack = 999;
+            // Item.maxStack = 999;
         }
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
@@ -50,9 +50,9 @@ namespace PlentyODarts.Content.Weapons.GemDarts
 
         public override void AddRecipes()
         {
-            CreateRecipe(25)
+            CreateRecipe()
                 .AddTile(ModContent.TileType<DartStationBasic>())
-                .AddIngredient(ItemID.Diamond, 1)
+                .AddIngredient(ItemID.Diamond, 5)
                 .Register();
         }
     }

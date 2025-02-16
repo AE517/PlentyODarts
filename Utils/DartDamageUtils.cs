@@ -32,7 +32,7 @@ namespace PlentyODarts.Utils
 
         public float GemDartMod(int gemCount, float damageCap)
         {
-            float bonus = gemCount * 0.5f;
+            float bonus = gemCount * 0.4f;
             return Math.Min(gemCount, damageCap);
         }
     }
