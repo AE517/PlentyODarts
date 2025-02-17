@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class ObsidianDartProj : ModProjectile
+    public class ObsidianDartProj : DartProjectile
     {
         private bool charged = false;
 
@@ -77,6 +77,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             Tile tile = Framing.GetTileSafely(Projectile.position);
             if (tile.LiquidType == LiquidID.Lava)
             {

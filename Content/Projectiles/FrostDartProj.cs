@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class FrostDartProj : ModProjectile
+    public class FrostDartProj : DartProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -85,6 +85,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             Player player = Main.LocalPlayer;
             if (Projectile.owner == Main.myPlayer)
             {

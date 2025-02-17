@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class WoodenDartProj : ModProjectile
+    public class WoodenDartProj : DartProjectile
     {
         public override void SetStaticDefaults()
         {

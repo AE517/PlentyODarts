@@ -1,36 +1,16 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace PlentyODarts.Content.Modus
+namespace PlentyODarts.Content.Shift
 {
-    public abstract class DartModus : ModItem, IModus
+    public abstract class DartShift : ModItem, IShift
     {
-        public abstract int Modus(Player player, Vector2 position, Vector2 velocity);
-
-        protected int ModusProjectile(
-            Player player,
-            Vector2 position,
-            Vector2 velocity,
-            int type,
-            int damage,
-            float knockback
-        )
-        {
-            return Projectile.NewProjectile(
-                player.GetSource_FromThis(),
-                position,
-                velocity,
-                type,
-                damage,
-                knockback,
-                player.whoAmI
-            );
-        }
+        public abstract bool Shift(Projectile projectile, Player player);
 
         public override bool CanRightClick()
         {
             Player player = Main.LocalPlayer;
+
             int maxAccIndex = 5 + player.extraAccessorySlots;
 
             for (int i = 13; i < 13 + maxAccIndex; i++)
@@ -39,7 +19,7 @@ namespace PlentyODarts.Content.Modus
                     return false;
             }
 
-            if (CheckModus().accessory != null)
+            if (CheckShift().accessory != null)
                 return true;
 
             return base.CanRightClick();
@@ -47,7 +27,7 @@ namespace PlentyODarts.Content.Modus
 
         public override void RightClick(Player player)
         {
-            var (index, accessory) = CheckModus();
+            var (index, accessory) = CheckShift();
 
             if (accessory != null)
             {
@@ -60,31 +40,29 @@ namespace PlentyODarts.Content.Modus
         {
             if (slot < 10)
             {
-                int index = CheckModus().index;
+                int index = CheckShift().index;
 
                 if (index != -1)
-                {
                     return slot == index;
-                }
             }
 
             return base.CanEquipAccessory(player, slot, false);
         }
 
-        protected (int index, Item accessory) CheckModus()
+        protected (int index, Item accessory) CheckShift()
         {
             Player player = Main.LocalPlayer;
+
             int maxAccIndex = 5 + player.extraAccessorySlots;
 
             for (int i = 3; i < 3 + maxAccIndex; i++)
             {
                 Item acc = player.armor[i];
 
-                if (!acc.IsAir && acc.ModItem is DartModus && acc != this.Item)
-                {
+                if (!acc.IsAir && acc.ModItem is DartShift && acc != this.Item)
                     return (i, acc);
-                }
             }
+
             return (-1, null);
         }
     }

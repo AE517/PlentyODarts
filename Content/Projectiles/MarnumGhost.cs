@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
-using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class MarnumGhost : ModProjectile
+    public class MarnumGhost : DartProjectile
     {
+        protected override bool IsShiftApplicable => false;
         private int bounces = 4;
 
         public override void SetStaticDefaults()

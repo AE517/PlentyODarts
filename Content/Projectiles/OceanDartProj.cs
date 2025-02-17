@@ -7,8 +7,10 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class OceanDartProj : ModProjectile
+    public class OceanDartProj : DartProjectile
     {
+        protected override bool IsShiftApplicable => false;
+
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Ocean Dart");
@@ -81,6 +83,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             if (Projectile.wet)
             {
                 Projectile.damage += 2;

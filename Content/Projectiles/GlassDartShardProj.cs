@@ -4,8 +4,10 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class GlassDartShardProj : ModProjectile
+    public class GlassDartShardProj : DartProjectile
     {
+        protected override bool IsShiftApplicable => false;
+
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Glass Shard");

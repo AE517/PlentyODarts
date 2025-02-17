@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class AurpuraProj : ModProjectile
+    public class AurpuraProj : DartProjectile
     {
         private const int BufferSize = 20;
         private Vector2[] posBuffer = new Vector2[BufferSize];
@@ -140,6 +140,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             posBuffer[Tail] = Projectile.position;
             Tail++;
             if (Tail >= BufferSize)
@@ -184,7 +186,7 @@ namespace PlentyODarts.Content.Projectiles
         }
     }
 
-    public class AurpuraProj2 : ModProjectile
+    public class AurpuraProj2 : DartProjectile
     {
         private const int BufferSize = 20;
         private Vector2[] posBuffer = new Vector2[BufferSize];
@@ -223,6 +225,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             posBuffer[Tail] = Projectile.position;
             Tail++;
             if (Tail >= BufferSize)

@@ -1,26 +1,25 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
 namespace PlentyODarts.Content.Shift
 {
-    public class HyperSpeed : DartShift
+    public class HyperForce : DartShift
     {
         public override bool Shift(Projectile projectile, Player player)
         {
-            projectile.velocity *= 1.03f;
-            projectile.damage = player.HeldItem.damage / 2;
+            projectile.velocity *= .97f;
+            projectile.damage = player.HeldItem.damage * 2;
             return true;
         }
 
         public override void SetStaticDefaults()
         {
-            DisplayName.Format("Shift - Hyperspeed");
+            DisplayName.Format("Shift - Hyperforce");
         }
 
         public override void SetDefaults()
         {
-            Item.height = 30;
+            Item.height = 26;
             Item.width = 22;
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(0, 0, 1, 0);
@@ -29,7 +28,7 @@ namespace PlentyODarts.Content.Shift
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<PoDPlayer>().SetShift(new HyperSpeed());
+            player.GetModPlayer<PoDPlayer>().SetShift(new HyperForce());
         }
     }
 }

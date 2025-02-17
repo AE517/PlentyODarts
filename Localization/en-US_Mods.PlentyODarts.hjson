@@ -102,7 +102,7 @@ Items: {
 
 			[c/42CF6A:This Dart is not affected by Modus nor Shifts.]
 
-			[c/69B595:"You exceeded my expectations with this one..."]
+			[c/69B595:"You overflowed my expectations with this one..."]
 			'''
 	}
 
@@ -233,6 +233,17 @@ Items: {
 			[c/69B595:"EXCELENT!"]
 			'''
 	}
+
+	HyperForce: {
+		DisplayName: Hyper Force
+		Tooltip:
+			'''
+			Increases overral dart damage at the cost of it's speed.
+			Only one type of 'Shift' can be equipped.
+
+			[c/69B595:"And his name is..."]
+			'''
+	}
 }
 
 Projectiles: {
@@ -250,13 +261,13 @@ Projectiles: {
 	MarnumGhost.DisplayName: Marnum Ghost
 	MarnumProj.DisplayName: Marnum Dart
 	ObsidianDartProj.DisplayName: Obsidian Dart
-	AmethystDartProj.DisplayName: Amethyst Dart Proj
-	SapphireDartProj.DisplayName: Sapphire Dart Proj
-	AmberDartProj.DisplayName: Amber Dart Proj
-	DiamondDartProj.DisplayName: Diamond Dart Proj
-	EmeraldDartProj.DisplayName: Emerald Dart Proj
-	RubyDartProj.DisplayName: Ruby Dart Proj
-	TopazDartProj.DisplayName: Topaz Dart Proj
+	AmethystDartProj.DisplayName: Amethyst Dart
+	SapphireDartProj.DisplayName: Sapphire Dart
+	AmberDartProj.DisplayName: Amber Dart
+	DiamondDartProj.DisplayName: Diamond Dart
+	EmeraldDartProj.DisplayName: Emerald Dart
+	RubyDartProj.DisplayName: Ruby Dart
+	TopazDartProj.DisplayName: Topaz Dart
 }
 
 Prefixes: {

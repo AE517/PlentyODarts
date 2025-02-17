@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class PoisonDartProj : ModProjectile
+    public class PoisonDartProj : DartProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -80,6 +80,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             Lighting.AddLight(Projectile.Center, .3f, 1f, .3f);
         }
     }

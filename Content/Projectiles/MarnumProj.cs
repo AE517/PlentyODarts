@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class MarnumProj : ModProjectile
+    public class MarnumProj : DartProjectile
     {
         private const int BufferSize = 20;
         private Vector2[] posBuffer = new Vector2[BufferSize];
@@ -95,6 +95,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             posBuffer[Tail] = Projectile.position;
             Tail++;
             if (Tail >= BufferSize)

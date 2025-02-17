@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles.GemDarts
 {
-    public class SapphireDartProj : ModProjectile
+    public class SapphireDartProj : DartProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -46,6 +46,8 @@ namespace PlentyODarts.Content.Projectiles.GemDarts
 
         public override void AI()
         {
+            base.AI();
+
             int dust = Dust.NewDust(
                 Projectile.position,
                 2,

@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class FieryDartProj : ModProjectile
+    public class FieryDartProj : DartProjectile
     {
         public Color[] dusts = { Color.Red, Color.Yellow, Color.Orange, Color.LightYellow };
 
@@ -80,6 +80,8 @@ namespace PlentyODarts.Content.Projectiles
 
         public override void AI()
         {
+            base.AI();
+
             Player player = Main.LocalPlayer;
 
             if (Projectile.owner == player.whoAmI)

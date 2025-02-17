@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles.GemDarts
 {
-    public class AmberDartProj : ModProjectile
+    public class AmberDartProj : DartProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -47,6 +47,7 @@ namespace PlentyODarts.Content.Projectiles.GemDarts
 
         public override void AI()
         {
+            base.AI();
             int dust = Dust.NewDust(Projectile.position, 2, 2, DustID.GemAmber, 0, 0, 125, default);
             Main.dust[dust].noGravity = true;
         }

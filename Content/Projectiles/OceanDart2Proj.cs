@@ -8,8 +8,10 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Projectiles
 {
-    public class OceanDart2Proj : ModProjectile
+    public class OceanDart2Proj : DartProjectile
     {
+        protected override bool IsShiftApplicable => false;
+
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Ocean Dart");
