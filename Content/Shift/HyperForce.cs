@@ -7,7 +7,7 @@ namespace PlentyODarts.Content.Shift
     {
         public override bool Shift(Projectile projectile, Player player)
         {
-            projectile.velocity *= .97f;
+            projectile.velocity *= .5f;
             projectile.damage = player.HeldItem.damage * 2;
             return true;
         }

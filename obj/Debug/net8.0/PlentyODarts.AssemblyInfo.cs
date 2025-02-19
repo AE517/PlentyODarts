@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlentyODarts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d7e6d3a469d6dfd28c1fb0aa1324c2fe7431348")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1734c17818eff336562364bbd98857390794b2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlentyODarts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlentyODarts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

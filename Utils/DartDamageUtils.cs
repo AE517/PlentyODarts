@@ -7,7 +7,7 @@ namespace PlentyODarts.Utils
     {
         public float mod = 0f;
 
-        internal float DamageMod()
+        internal float BossCounterMod()
         {
             mod += NPC.downedSlimeKing.ToInt();
             mod += NPC.downedBoss1.ToInt();

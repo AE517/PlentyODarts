@@ -76,7 +76,7 @@ namespace PlentyODarts.Content
         )
         {
             DamageUtils modifier = new DamageUtils();
-            damage = damage + (int)(damage * modifier.DamageMod());
+            damage = damage + (int)(damage * modifier.BossCounterMod());
         }
 
         // public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)

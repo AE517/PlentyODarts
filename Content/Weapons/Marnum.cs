@@ -41,6 +41,7 @@ namespace PlentyODarts.Content.Weapons
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
+            base.ModifyWeaponDamage(player, ref damage);
             damage += player.CountItem(ItemID.PlatinumOre) / 1000;
         }
 

@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
@@ -8,8 +7,8 @@ namespace PlentyODarts.Content.Shift
     {
         public override bool Shift(Projectile projectile, Player player)
         {
-            projectile.velocity *= 1.03f;
-            projectile.damage = player.HeldItem.damage / 2;
+            projectile.velocity *= 1.2f;
+            projectile.damage = (int)(projectile.damage / 2);
             return true;
         }
 

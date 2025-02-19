@@ -50,6 +50,15 @@ namespace PlentyODarts.Content.Weapons
             ref float knockback
         )
         {
+            base.ModifyShootStats(
+                player,
+                ref position,
+                ref velocity,
+                ref type,
+                ref damage,
+                ref knockback
+            );
+
             if (player.ZoneSnow)
             {
                 velocity *= 5f;
@@ -62,6 +71,8 @@ namespace PlentyODarts.Content.Weapons
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
+            base.ModifyWeaponDamage(player, ref damage);
+
             if (player.ZoneSnow)
                 damage += 0.5f;
             if (player.ZoneUnderworldHeight)
