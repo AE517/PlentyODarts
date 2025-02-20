@@ -244,6 +244,11 @@ Items: {
 			[c/69B595:"And his name is..."]
 			'''
 	}
+
+	ElectricDart: {
+		DisplayName: Electric Dart
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -268,6 +273,7 @@ Projectiles: {
 	EmeraldDartProj.DisplayName: Emerald Dart
 	RubyDartProj.DisplayName: Ruby Dart
 	TopazDartProj.DisplayName: Topaz Dart
+	ElectricDartProj.DisplayName: Electric Dart Proj
 }
 
 Prefixes: {
