@@ -11,7 +11,7 @@ namespace PlentyODarts.Content.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(10, 18));
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 18));
             ItemID.Sets.AnimatesAsSoul[Type] = true;
 
             DisplayName.Format("Electric Dart");

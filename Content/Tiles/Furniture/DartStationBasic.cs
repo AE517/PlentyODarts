@@ -17,6 +17,7 @@ namespace PlentyODarts.Content.Tiles.Furniture
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
             Main.tileFrameImportant[Type] = true;
+
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.IgnoredByNpcStepUp[Type] = true;
 
@@ -40,6 +41,11 @@ namespace PlentyODarts.Content.Tiles.Furniture
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Basic Dart Station"));
+        }
+
+        public override void NumDust(int x, int y, bool fail, ref int num)
+        {
+            num = 0;
         }
     }
 }
