@@ -126,7 +126,7 @@ Items: {
 			'''
 			Throws a Marbled Platinum Dart that will bounce on terrain.
 			Upon hitting enemies it will dissapear creating a bouncy after-image.
-			Deals additional damage bases on how much platinum ores are with you.
+			Deals additional damage based on how much platinum ores are with you.
 
 			[c/69B595:"Makes me wonder... Can ghosts throw darts too?"]
 			'''
@@ -139,7 +139,7 @@ Items: {
 			Upon hitting lava it will get repelled becoming charged.
 			Charged attacks critically hits and
 			explode on contact burning enemies regardless of immunities.
-			Having [c/FF0000:"Lava buckets"] produces the same effect but at a
+			Having [c/FF0000:Lava buckets] produces the same effect but at a
 			weaker rate.
 
 			[c/69B595:"Ya like playin' with fire, eh?"]
@@ -247,7 +247,24 @@ Items: {
 
 	ElectricDart: {
 		DisplayName: Electric Dart
-		Tooltip: ""
+		Tooltip:
+			'''
+			Critical hits release sparkles.
+			Automatically crits if it's raining or the target is wet.
+
+			[c/69B595:"Shocking ain't it?"]
+			'''
+	}
+
+	BasicPrecisionLens: {
+		DisplayName: Basic Precision Lens
+		Tooltip:
+			'''
+			Dart Damage is increased by 3%.
+			Dart Critical Chance is increased by 5%.
+
+			[c/69B595:"But why just one tho?"]
+			'''
 	}
 }
 
@@ -273,7 +290,7 @@ Projectiles: {
 	EmeraldDartProj.DisplayName: Emerald Dart
 	RubyDartProj.DisplayName: Ruby Dart
 	TopazDartProj.DisplayName: Topaz Dart
-	ElectricDartProj.DisplayName: Electric Dart Proj
+	ElectricDartProj.DisplayName: Electric Dart
 }
 
 Prefixes: {
