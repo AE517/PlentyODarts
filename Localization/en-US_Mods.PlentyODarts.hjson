@@ -291,6 +291,7 @@ Projectiles: {
 	RubyDartProj.DisplayName: Ruby Dart
 	TopazDartProj.DisplayName: Topaz Dart
 	ElectricDartProj.DisplayName: Electric Dart
+	ElectricDartSparkle.DisplayName: Electric Dart Sparkle
 }
 
 Prefixes: {

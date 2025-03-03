@@ -44,19 +44,14 @@ namespace PlentyODarts.Content.Projectiles
             if (hit.Crit)
             {
                 SoundEngine.PlaySound(SoundID.Item93.WithVolumeScale(.25f), Projectile.position);
+
+                SpawnSparkles();
+
                 if (target.buffImmune[BuffID.Electrified])
                 {
                     target.buffImmune[BuffID.Electrified] = false;
                     target.AddBuff(BuffID.Electrified, 300);
                 }
-
-                if (target.ai[0] == 300)
-                {
-                    target.buffImmune[BuffID.Electrified] = true;
-                }
-
-                if (target.HasBuff(BuffID.Electrified))
-                    target.ai[0] = 0;
             }
         }
 
@@ -86,6 +81,29 @@ namespace PlentyODarts.Content.Projectiles
             );
 
             Main.dust[dust].noGravity = true;
+        }
+
+        private void SpawnSparkles()
+        {
+            int sparkles = Main.rand.Next(3, 10);
+
+            for (int i = 0; i <= sparkles; i++)
+            {
+                float rotation = MathHelper.ToRadians(Main.rand.Next(-360, 360));
+                Vector2 newVel = Projectile.oldVelocity.RotatedByRandom(rotation) * .5f;
+
+                int sparkle = Projectile.NewProjectile(
+                    Projectile.GetSource_FromThis(),
+                    Projectile.position,
+                    newVel,
+                    ModContent.ProjectileType<ElectricDartSparkle>(),
+                    Projectile.damage / 2,
+                    1,
+                    Projectile.owner
+                );
+
+                Main.projectile[sparkle].velocity *= Main.rand.NextFloat(.1f, 1);
+            }
         }
     }
 }
