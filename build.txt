@@ -1,3 +1,4 @@
 displayName = Plenty O' Darts
 author = &#198;517
 version = 0.1
+modReferences = ParticleLibrary

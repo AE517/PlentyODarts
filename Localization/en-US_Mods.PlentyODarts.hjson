@@ -310,3 +310,27 @@ Prefixes: {
 	Brute.DisplayName: Brute
 	Fierce.DisplayName: Fierce
 }
+
+NPCs: {
+	DartMaster: {
+		Census.SpawnCondition: Conditions unknown
+
+		TownNPCMood: {
+			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			DislikeNPC: I dislike {NPCName}.
+			LikeNPC: I like {NPCName}.
+			LoveNPC: I love {NPCName}.
+			HateBiome: I hate {BiomeName}.
+			LoveBiome: I love {BiomeName}.
+			HateCrowded: I hate how crowded I am.
+			DislikeCrowded: I dislike how crowded I am.
+			LoveSpace: I love having so much space.
+			FarFromHome: I am too far from home.
+			NoHome: I hate not having a home.
+			Content: I am content.
+		}
+
+		DisplayName: Dart Master
+	}
+}

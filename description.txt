@@ -1,1 +1,12 @@
-Modify this file with a description of your mod.
+PlentyODarts is a small and simple mod that aims to bring a new way of enjoying the Throwing Class, without feeling out of place.
+It introduces the Dart Master Class, a Damage Class that uses, well, Darts! Specifically Hand Darts.
+
+Small and precise this pointy weapons bring a whole new way of playing by exploiting enemies defenses and bypassing their immunities.
+
+Create Darts or find them in the world, learn about the Dart Masters Clan and unveil the countless combinations that Modus and Shifts can bring...
+
+All that and more...
+So... Are you ready to hit the Big Fish?
+
+PlentyODarts uses the Particle Library as a dependency.
+This amazing mod made by SnowyStarfall can be found at https://github.com/SnowyStarfall/ParticleLibrary/tree/main.

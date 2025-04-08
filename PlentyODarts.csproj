@@ -7,10 +7,12 @@
 	<PropertyGroup>
 		
 	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="ParticleLibrary">
+	    <HintPath>lib\ParticleLibrary.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 
 	<!-- References -->
-	<ItemGroup>
-		
-	</ItemGroup>
 
 </Project>
