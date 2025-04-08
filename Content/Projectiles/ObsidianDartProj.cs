@@ -165,7 +165,7 @@ namespace PlentyODarts.Content.Projectiles
                 Main.npc,
                 npc =>
                 {
-                    if (npc.Hitbox.Intersects(rect))
+                    if (npc.Hitbox.Intersects(rect) && !npc.townNPC)
                     {
                         npc.SimpleStrikeNPC(Projectile.damage, 1);
                         if (charged)
