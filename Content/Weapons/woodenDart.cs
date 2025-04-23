@@ -28,7 +28,7 @@ namespace PlentyODarts.Content.Weapons
             Item.UseSound = SoundID.Item39;
             Item.rare = ItemRarityID.White;
             Item.maxStack = 999;
-            Item.shoot = ModContent.ProjectileType<WoodenDartProj>();
+            Item.shoot = ModContent.ProjectileType<WiseGoldDartProj>();
             Item.noMelee = true;
             Item.noUseGraphic = true;
             Item.DamageType = DartDamage.Instance;

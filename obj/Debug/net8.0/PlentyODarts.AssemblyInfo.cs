@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlentyODarts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6655cd2a9be96dd0685d87460f23508a7682fc4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3d2d89215aec9cacf19c4680bc2a21908bbccaa")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlentyODarts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlentyODarts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
