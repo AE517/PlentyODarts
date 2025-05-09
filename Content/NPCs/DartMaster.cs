@@ -162,7 +162,7 @@ namespace PlentyODarts.Content.NPCs
 
         public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
         {
-            projType = ModContent.ProjectileType<MarnumProj>();
+            projType = ModContent.ProjectileType<WiseGoldDartProj>();
             attackDelay = 1;
         }
 

@@ -293,6 +293,7 @@ Projectiles: {
 	ElectricDartProj.DisplayName: Electric Dart
 	ElectricDartSparkle.DisplayName: Electric Dart Sparkle
 	WiseGoldDartProj.DisplayName: Wise Gold Dart Proj
+	WiseGoldDartProj2.DisplayName: Wise Gold Dart Proj2
 }
 
 Prefixes: {
