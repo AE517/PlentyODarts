@@ -68,7 +68,7 @@ namespace PlentyODarts.Content.Weapons
 
             if (player.HasItem(ItemID.LavaBucket))
             {
-                Vector2 pos = new Vector2(
+                Vector2 pos = new(
                     Item.Center.X - Main.screenPosition.X,
                     Item.Center.Y - Main.screenPosition.Y
                 );

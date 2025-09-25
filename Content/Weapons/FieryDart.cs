@@ -43,7 +43,7 @@ namespace PlentyODarts.Content.Weapons
 
         public override void PostUpdate()
         {
-            Vector2 pos = new Vector2(Item.Center.X + 20, Item.Center.Y);
+            Vector2 pos = new(Item.Center.X + 20, Item.Center.Y);
             Lighting.AddLight(pos, .9f, .3f, .7f);
         }
 

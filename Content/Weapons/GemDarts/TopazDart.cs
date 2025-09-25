@@ -42,7 +42,7 @@ namespace PlentyODarts.Content.Weapons.GemDarts
 
         public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
-            DamageUtils utils = new DamageUtils();
+            DamageUtils utils = new();
             int count = player.CountItem(ItemID.Topaz);
 
             damage = StatModifier.Default with { Flat = utils.GemDartMod(count, 60) };

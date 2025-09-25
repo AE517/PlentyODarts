@@ -8,7 +8,7 @@ namespace PlentyODarts.Content.Projectiles
 {
     public class FieryDartProj : DartProjectile
     {
-        public Color[] dusts = { Color.Red, Color.Yellow, Color.Orange, Color.LightYellow };
+        public Color[] dusts = [Color.Red, Color.Yellow, Color.Orange, Color.LightYellow];
 
         public override void SetStaticDefaults()
         {
@@ -104,7 +104,7 @@ namespace PlentyODarts.Content.Projectiles
                 1
             );
 
-            Vector2 pos = new Vector2(Projectile.Center.X + 20, Projectile.Center.Y);
+            Vector2 pos = new(Projectile.Center.X + 20, Projectile.Center.Y);
             Lighting.AddLight(pos, .9f, .5f, .8f);
         }
     }

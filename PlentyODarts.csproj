@@ -5,7 +5,10 @@
 
 	<!-- General -->
 	<PropertyGroup>
-		
+		<AssemblyName>PlentyODarts</AssemblyName>		
+		<TargetFramework>net8.0</TargetFramework>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Reference Include="ParticleLibrary">

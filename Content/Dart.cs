@@ -75,8 +75,8 @@ namespace PlentyODarts.Content
             ref float knockback
         )
         {
-            DamageUtils modifier = new DamageUtils();
-            damage = damage + (int)(damage * modifier.BossCounterMod());
+            DamageUtils modifier = new();
+            damage += (int)(damage * modifier.BossCounterMod());
         }
 
         // public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)

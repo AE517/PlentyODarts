@@ -21,7 +21,7 @@ namespace PlentyODarts.Content.NPCs
         public const string ShopName = "Dart Emporium";
         public int InteractionCounter = 0;
 
-        private static Profiles.StackedNPCProfile NPCProfile;
+        private static readonly Profiles.StackedNPCProfile NPCProfile;
 
         public static LocalizedText UpgradedText { get; private set; }
 
@@ -40,7 +40,11 @@ namespace PlentyODarts.Content.NPCs
             NPCID.Sets.ShimmerTownTransform[Type] = false;
 
             NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers =
-                new NPCID.Sets.NPCBestiaryDrawModifiers() { Velocity = 1f, Direction = 1 };
+                new()
+                {
+                    Velocity = 1f,
+                    Direction = 1,
+                };
 
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifiers);
 
@@ -108,16 +112,13 @@ namespace PlentyODarts.Content.NPCs
         }
 
         public override void AI() =>
-            PoDWorld.arrivedDartMaster = !PoDWorld.arrivedDartMaster
-                ? true
-                : PoDWorld.arrivedDartMaster;
+            PoDWorld.arrivedDartMaster = !PoDWorld.arrivedDartMaster || PoDWorld.arrivedDartMaster;
 
         public override bool CanTownNPCSpawn(int numTownNPCs) =>
-            PoDWorld.arrivedDartMaster ? true : false;
+            PoDWorld.arrivedDartMaster;
 
         public override List<String> SetNPCNameList() =>
-            new List<string>()
-            {
+            [
                 "Luke H.",
                 "Luke L.",
                 "Michael",
@@ -129,11 +130,11 @@ namespace PlentyODarts.Content.NPCs
                 "Adrian",
                 "John",
                 "Raymond",
-            };
+            ];
 
         public override string GetChat()
         {
-            WeightedRandom<string> dialogue = new WeightedRandom<string>();
+            WeightedRandom<string> dialogue = new();
             dialogue.Add("Sup");
 
             return dialogue;

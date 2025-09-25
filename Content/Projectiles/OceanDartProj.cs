@@ -47,7 +47,7 @@ namespace PlentyODarts.Content.Projectiles
         {
             for (int i = 0; i <= 12; i++)
             {
-                int dust = Dust.NewDust(
+                _ = Dust.NewDust(
                     new Vector2(
                         Projectile.position.X + Main.rand.Next(0, 30),
                         Projectile.position.Y + Main.rand.Next(0, 30)
@@ -116,7 +116,7 @@ namespace PlentyODarts.Content.Projectiles
         {
             Texture2D texture = TextureAssets.Projectile[Type].Value;
 
-            Vector2 drawOrigin = new Vector2(texture.Width * 0.5f, Projectile.height * 0.5f);
+            Vector2 drawOrigin = new(texture.Width * 0.5f, Projectile.height * 0.5f);
             for (int k = Projectile.oldPos.Length - 1; k > 0; k--)
             {
                 Vector2 drawPos =

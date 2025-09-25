@@ -10,7 +10,7 @@ namespace PlentyODarts.Content.Modus
         {
             for (int i = -1; i <= 1; i++)
             {
-                int p = ModusProjectile(
+                _ = ModusProjectile(
                     player,
                     position,
                     velocity.RotatedBy(i * 0.3f),

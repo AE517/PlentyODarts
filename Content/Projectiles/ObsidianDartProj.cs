@@ -46,10 +46,10 @@ namespace PlentyODarts.Content.Projectiles
         public override bool OnTileCollide(Microsoft.Xna.Framework.Vector2 oldVelocity)
         {
             if (charged)
-                explode(Projectile.damage, 75, 75);
+                Explode(Projectile.damage, 75, 75);
 
             if (Main.player[Projectile.owner].HasItem(ItemID.LavaBucket))
-                explode(Projectile.damage / 2, 50, 50);
+                Explode(Projectile.damage / 2, 50, 50);
 
             Projectile.Kill();
             return false;
@@ -60,11 +60,11 @@ namespace PlentyODarts.Content.Projectiles
             target.AddBuff(BuffID.OnFire, 600);
             if (charged)
             {
-                explode((int)(Projectile.damage * 1.5f), 150, 150);
+                Explode((int)(Projectile.damage * 1.5f), 150, 150);
             }
 
             if (Main.LocalPlayer.HasItem(ItemID.LavaBucket))
-                explode((int)(Projectile.damage * 0.9f), 50, 50);
+                Explode((int)(Projectile.damage * 0.9f), 50, 50);
         }
 
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
@@ -127,7 +127,7 @@ namespace PlentyODarts.Content.Projectiles
                 )
                 .Value;
 
-            Vector2 p = new Vector2(
+            Vector2 p = new(
                 Projectile.Center.X - Main.screenPosition.X,
                 Projectile.Center.Y - Main.screenPosition.Y
             );
@@ -151,11 +151,11 @@ namespace PlentyODarts.Content.Projectiles
             }
         }
 
-        void explode(int damage, int width, int height)
+        void Explode(int damage, int width, int height)
         {
             SoundEngine.PlaySound(SoundID.Item89, Projectile.position);
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
-            Rectangle rect = new Rectangle(
+            Rectangle rect = new(
                 (int)Projectile.Center.X - width / 2,
                 (int)Projectile.Center.Y - height / 2,
                 width,
@@ -173,10 +173,10 @@ namespace PlentyODarts.Content.Projectiles
                     }
                 }
             );
-            makeSmoke();
+            MakeSmoke();
             for (int i = 0; i <= 20; i++)
             {
-                Vector2 v = new Vector2(
+                Vector2 v = new(
                     Main.rand.NextFloat(-2f, 2f) * 5,
                     Main.rand.NextFloat(-2f, 2f) * 5
                 );
@@ -194,7 +194,7 @@ namespace PlentyODarts.Content.Projectiles
             }
         }
 
-        void makeSmoke()
+        void MakeSmoke()
         {
             for (int k = 0; k < 2; k++)
             {

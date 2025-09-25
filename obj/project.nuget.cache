@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t0nwCWtgQYY=",
+  "dgSpecHash": "NCffjz5iWONOrAffKrGkxyrp9e6kqv7nShjtVo+OyNkbexgD25SS8JDkQZbR58q9uxxzdUdc+mg6/5ie6g/Qtw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Guilherme\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\PlentyODarts\\PlentyODarts.csproj",
+  "projectFilePath": "/home/guilherme/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Guilherme\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "/home/guilherme/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512"
   ],
   "logs": []
 }

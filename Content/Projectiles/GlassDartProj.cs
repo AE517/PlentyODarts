@@ -74,8 +74,7 @@ namespace PlentyODarts.Content.Projectiles
                 Vector2 newVel = velocity.RotatedByRandom(rotation);
 
                 newVel *= 1f - Main.rand.NextFloat(0.5f);
-
-                int proj = Projectile.NewProjectile(
+                _ = Projectile.NewProjectile(
                     Projectile.GetSource_FromThis(),
                     Projectile.position,
                     newVel,

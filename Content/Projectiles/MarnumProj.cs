@@ -11,7 +11,7 @@ namespace PlentyODarts.Content.Projectiles
     public class MarnumProj : DartProjectile
     {
         private const int BufferSize = 20;
-        private Vector2[] posBuffer = new Vector2[BufferSize];
+        private readonly Vector2[] posBuffer = new Vector2[BufferSize];
         private int Tail = 0;
         private bool BufferFull;
         private int bounces = 4;

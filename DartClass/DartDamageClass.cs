@@ -1,6 +1,8 @@
 using Terraria.ModLoader;
 
+#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace PlentyODarts
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 {
     public class DartDamage : DamageClass
     {

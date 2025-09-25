@@ -10,7 +10,7 @@ namespace PlentyODarts.Content.Projectiles
     public class AurpuraProj : DartProjectile
     {
         private const int BufferSize = 20;
-        private Vector2[] posBuffer = new Vector2[BufferSize];
+        private readonly Vector2[] posBuffer = new Vector2[BufferSize];
         private int Tail = 0;
         private bool BufferFull;
 
@@ -124,7 +124,7 @@ namespace PlentyODarts.Content.Projectiles
                 dartVelocity.Normalize();
                 dartVelocity *= 20f;
 
-                int dart = Projectile.NewProjectile(
+                int _ = Projectile.NewProjectile(
                     Projectile.GetSource_FromThis(),
                     Projectile.position,
                     dartVelocity,
@@ -189,7 +189,7 @@ namespace PlentyODarts.Content.Projectiles
     public class AurpuraProj2 : DartProjectile
     {
         private const int BufferSize = 20;
-        private Vector2[] posBuffer = new Vector2[BufferSize];
+        private readonly Vector2[] posBuffer = new Vector2[BufferSize];
         private int Tail = 0;
         private bool BufferFull;
 

@@ -8,7 +8,7 @@ namespace PlentyODarts.Content.Modus
     {
         public abstract int Modus(Player player, Vector2 position, Vector2 velocity);
 
-        protected int ModusProjectile(
+        protected static int ModusProjectile(
             Player player,
             Vector2 position,
             Vector2 velocity,
