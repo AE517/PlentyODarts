@@ -13,6 +13,10 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
+using PlentyODarts.Content.Modus;
+using PlentyODarts.Content.Shift;
+using PlentyODarts.Content.Accessories;
+
 namespace PlentyODarts.Content.NPCs
 {
     [AutoloadHead]
@@ -180,6 +184,26 @@ namespace PlentyODarts.Content.NPCs
         )
         {
             multiplier = Main.hardMode ? 20f : 15f;
+        }
+
+        public override void SetChatButtons(ref string button, ref string button2) {
+            button = ShopName;
+        }
+
+        public override void OnChatButtonClicked(bool firstButton, ref string shopName) {
+            if (firstButton) shopName = ShopName;
+        }
+
+        public override void AddShops() {
+            NPCShop dartShop = new(Type, ShopName);
+
+            dartShop
+                .Add<Split>()
+                .Add<Conic>()
+                .Add<HyperForce>()
+                .Add<HyperSpeed>();
+
+            dartShop.Register();
         }
     }
 }
