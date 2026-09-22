@@ -3,14 +3,20 @@ using Terraria.ID;
 
 namespace PlentyODarts.Content.Shift
 {
-    public class HyperForce : DartShift
+
+    public class HyperForceEffect : IShift
     {
-        public override bool Shift(Projectile projectile, Player player)
+        public bool Shift(Projectile projectile, Player player)
         {
             projectile.velocity *= .5f;
-            projectile.damage = player.HeldItem.damage * 2;
+            projectile.damage *= 2;
             return true;
         }
+    }
+    
+    public class HyperForce : DartShift
+    {
+        private static readonly IShift Effect = new HyperForceEffect();
 
         public override void SetStaticDefaults()
         {
@@ -28,7 +34,7 @@ namespace PlentyODarts.Content.Shift
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<PoDPlayer>().SetShift(new HyperForce());
+            player.GetModPlayer<PoDPlayer>().SetShift(Effect);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace PlentyODarts.Content
         //Ensures Reforge prefixes to actually work also including the Dart class directed ones;
         public override bool WeaponPrefix() => true;
 
-        //Despite being a Throwing based class it does not benefits from ranged prefixes;
+        //Despite being a Throwing based class it does not benefit from ranged prefixes;
         public override bool RangedPrefix() => false;
 
         public override bool Shoot(
@@ -43,7 +43,7 @@ namespace PlentyODarts.Content
         }
 
         /// <summary>
-        /// Applies the current equiped Modus to the Dart in use (HeldItem) changing it's present Shoot logic.
+        /// Applies the current equipped Modus to the Dart in use (HeldItem) changing its present Shoot logic.
         /// </summary>
         /// <param name="player">Actual player (Projectile.owner) using the held Dart.</param>
         /// <param name="position">Dart Spawn Projectile initial position (defined upon shooting).</param>

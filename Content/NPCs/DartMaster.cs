@@ -16,6 +16,7 @@ using Terraria.Utilities;
 using PlentyODarts.Content.Modus;
 using PlentyODarts.Content.Shift;
 using PlentyODarts.Content.Accessories;
+using PlentyODarts.Content.Projectiles.Phase_02;
 
 namespace PlentyODarts.Content.NPCs
 {
@@ -121,7 +122,7 @@ namespace PlentyODarts.Content.NPCs
         public override bool CanTownNPCSpawn(int numTownNPCs) =>
             PoDWorld.arrivedDartMaster;
 
-        public override List<String> SetNPCNameList() =>
+        public override List<string> SetNPCNameList() =>
             [
                 "Luke H.",
                 "Luke L.",

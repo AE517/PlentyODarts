@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/guilherme/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj": {}
+    "/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj": {}
   },
   "projects": {
-    "/home/guilherme/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj": {
+    "/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/guilherme/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj",
+        "projectUniqueName": "/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj",
         "projectName": "PlentyODarts",
-        "projectPath": "/home/guilherme/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj",
-        "packagesPath": "/home/guilherme/.nuget/packages/",
-        "outputPath": "/home/guilherme/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/",
+        "projectPath": "/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/PlentyODarts.csproj",
+        "packagesPath": "/home/anruz/.nuget/packages/",
+        "outputPath": "/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/guilherme/.nuget/NuGet/NuGet.Config"
+          "/home/anruz/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -32,10 +33,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "imports": [
             "net461",
@@ -51,7 +59,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
             }
           ],
           "frameworkReferences": {
@@ -59,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

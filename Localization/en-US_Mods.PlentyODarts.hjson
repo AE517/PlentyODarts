@@ -62,8 +62,8 @@ Items: {
 		DisplayName: Modus - Split
 		Tooltip:
 			'''
-			Alters the properties of the equiped Dart allowing to split itself at opposing directions.
-			Only one type of 'Modus' can be equiped.
+			Alters the properties of the equipped Dart allowing to split itself at opposing directions.
+			Only one type of 'Modus' can be equipped.
 
 			[c/69B595:"The duality of Darts..."]
 			'''
@@ -73,7 +73,7 @@ Items: {
 		DisplayName: Shift - Hyperspeed
 		Tooltip:
 			'''
-			Increase overral Dart Speed at the cost of it's Damage.
+			Increase overall Dart Speed at the cost of it's Damage.
 			Only one type of 'Shift' can be equipped.
 
 			[c/69B595:"ZOOOOOOOM!"]
@@ -85,7 +85,7 @@ Items: {
 		Tooltip:
 			'''
 			Can be used to make more complex darts.
-			[c/69B595:"Every Dartmaster has a certain kind of industriousness..."]
+			[c/69B595:"Every DartMaster has a certain kind of industriousness..."]
 			'''
 	}
 
@@ -97,7 +97,7 @@ Items: {
 			Primary use: Throws a watery Dart that renders the target wet regardless of immunities.
 			Secondary use: Throws a fiery Dart that on contact with wet targets
 			will create an explosion dealing extra damage.
-			Enimies hit by the explosion will no longer be wet.
+			Enemies hit by the explosion will no longer be wet.
 			Both Darts travel faster and deal extra damage on rain and underwater.
 
 			[c/42CF6A:This Dart is not affected by Modus nor Shifts.]
@@ -125,7 +125,7 @@ Items: {
 		Tooltip:
 			'''
 			Throws a Marbled Platinum Dart that will bounce on terrain.
-			Upon hitting enemies it will dissapear creating a bouncy after-image.
+			Upon hitting enemies it will disappear creating a bouncy after-image.
 			Deals additional damage based on how much platinum ores are with you.
 
 			[c/69B595:"Makes me wonder... Can ghosts throw darts too?"]
@@ -150,8 +150,8 @@ Items: {
 		DisplayName: Modus - Conic
 		Tooltip:
 			'''
-			Alters the properties of the equiped Dart to triple itself in a cone.
-			Only one type of 'Modus' can be equiped.
+			Alters the properties of the equipped Dart to triple itself in a cone.
+			Only one type of 'Modus' can be equipped.
 
 			[c/69B595:"Traffic? What's this?..."]
 			'''
@@ -266,6 +266,11 @@ Items: {
 			[c/69B595:"But why just one tho?"]
 			'''
 	}
+
+	SlimeDart: {
+		DisplayName: Slime Dart
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -294,6 +299,7 @@ Projectiles: {
 	ElectricDartSparkle.DisplayName: Electric Dart Sparkle
 	WiseGoldDartProj.DisplayName: Wise Gold Dart Proj
 	WiseGoldDartProj2.DisplayName: Wise Gold Dart Proj2
+	SlimeDartProj.DisplayName: Slime Dart Proj
 }
 
 Prefixes: {
@@ -304,7 +310,7 @@ Prefixes: {
 	Disastrous.DisplayName: Disastrous
 	DartWeaponPrefix.DisplayName: Dart Weapon Prefix
 	Complex.DisplayName: Complex
-	Alegoric.DisplayName: Alegoric
+	Allegoric.DisplayName: Allegoric
 	Quintessential.DisplayName: Quintessential
 	Rebellious.DisplayName: Rebellious
 	Sharp.DisplayName: Sharp

@@ -1,17 +1,17 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
+using PlentyODarts.Utils;
 
 namespace PlentyODarts.Content.Modus
 {
-    public class Split : DartModus
+    public class SplitBehavior : IModus
     {
-        public override int Modus(Player player, Vector2 position, Vector2 velocity)
+        public int Modus(Player player, Vector2 position, Vector2 velocity)
         {
             for (int i = -1; i <= 1; i += 2)
             {
-                _ = ModusProjectile(
+                _ = DartUtils.SpawnModusProjectile(
                     player,
                     position,
                     velocity * i,
@@ -20,10 +20,15 @@ namespace PlentyODarts.Content.Modus
                     player.HeldItem.knockBack
                 );
             }
+
             return 0;
         }
+    }
+public class Split : DartModus
+{
 
-        public override void SetStaticDefaults()
+    private static readonly IModus Behavior = new SplitBehavior();
+    public override void SetStaticDefaults()
         {
             DisplayName.Format("Modus - Split");
         }
@@ -39,7 +44,7 @@ namespace PlentyODarts.Content.Modus
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<PoDPlayer>().SetModus(new Split());
+            player.GetModPlayer<PoDPlayer>().SetModus(Behavior);
         }
     }
 }

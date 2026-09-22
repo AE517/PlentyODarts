@@ -1,33 +1,11 @@
-using Microsoft.Xna.Framework;
+// using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Modus
 {
-    public abstract class DartModus : ModItem, IModus
+    public abstract class DartModus : ModItem
     {
-        public abstract int Modus(Player player, Vector2 position, Vector2 velocity);
-
-        protected static int ModusProjectile(
-            Player player,
-            Vector2 position,
-            Vector2 velocity,
-            int type,
-            int damage,
-            float knockback
-        )
-        {
-            return Projectile.NewProjectile(
-                player.GetSource_FromThis(),
-                position,
-                velocity,
-                type,
-                damage,
-                knockback,
-                player.whoAmI
-            );
-        }
-
         public override bool CanRightClick()
         {
             Player player = Main.LocalPlayer;

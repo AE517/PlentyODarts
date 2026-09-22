@@ -1,5 +1,21 @@
-C:\Users\Guilherme\Documents\My Games\Terraria\tModLoader\ModSources\PlentyODarts\obj\Debug\net8.0\PlentyODarts.csproj.AssemblyReference.cache
-C:\Users\Guilherme\Documents\My Games\Terraria\tModLoader\ModSources\PlentyODarts\obj\Debug\net8.0\PlentyODarts.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Guilherme\Documents\My Games\Terraria\tModLoader\ModSources\PlentyODarts\obj\Debug\net8.0\PlentyODarts.AssemblyInfoInputs.cache
-C:\Users\Guilherme\Documents\My Games\Terraria\tModLoader\ModSources\PlentyODarts\obj\Debug\net8.0\PlentyODarts.AssemblyInfo.cs
-C:\Users\Guilherme\Documents\My Games\Terraria\tModLoader\ModSources\PlentyODarts\obj\Debug\net8.0\PlentyODarts.csproj.CoreCompileInputs.cache
+C:/Users/Guilherme/Documents/My Games/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.csproj.AssemblyReference.cache
+C:/Users/Guilherme/Documents/My Games/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Guilherme/Documents/My Games/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.AssemblyInfoInputs.cache
+C:/Users/Guilherme/Documents/My Games/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.AssemblyInfo.cs
+C:/Users/Guilherme/Documents/My Games/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.csproj.CoreCompileInputs.cache
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/bin/Debug/net8.0/PlentyODarts.deps.json
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/bin/Debug/net8.0/PlentyODarts.dll
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/bin/Debug/net8.0/PlentyODarts.pdb
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/bin/Debug/net8.0/ParticleLibrary.dll
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/bin/Debug/net8.0/ParticleLibrary.xml
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.csproj.AssemblyReference.cache
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.GeneratedMSBuildEditorConfig.editorconfig
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.AssemblyInfoInputs.cache
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.AssemblyInfo.cs
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.csproj.CoreCompileInputs.cache
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.sourcelink.json
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyOD.3D1537CF.Up2Date
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.dll
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/refint/PlentyODarts.dll
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/PlentyODarts.pdb
+/home/anruz/.local/share/Terraria/tModLoader/ModSources/PlentyODarts/obj/Debug/net8.0/ref/PlentyODarts.dll

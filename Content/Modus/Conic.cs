@@ -1,16 +1,17 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using PlentyODarts.Utils;
 
 namespace PlentyODarts.Content.Modus
 {
-    public class Conic : DartModus
+    public class ConicBehavior : IModus
     {
-        public override int Modus(Player player, Vector2 position, Vector2 velocity)
+        public int Modus(Player player, Vector2 position, Vector2 velocity)
         {
             for (int i = -1; i <= 1; i++)
             {
-                _ = ModusProjectile(
+                _ = DartUtils.SpawnModusProjectile(
                     player,
                     position,
                     velocity.RotatedBy(i * 0.3f),
@@ -21,7 +22,12 @@ namespace PlentyODarts.Content.Modus
             }
             return 0;
         }
+    }
 
+    public class Conic : DartModus
+    {
+        private static readonly IModus Behavior = new ConicBehavior();
+    
         public override void SetStaticDefaults()
         {
             DisplayName.Format("Modus - Conic");
@@ -38,7 +44,7 @@ namespace PlentyODarts.Content.Modus
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<PoDPlayer>().SetModus(new Conic());
+            player.GetModPlayer<PoDPlayer>().SetModus(Behavior);
         }
     }
 }

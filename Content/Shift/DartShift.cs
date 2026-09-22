@@ -3,10 +3,8 @@ using Terraria.ModLoader;
 
 namespace PlentyODarts.Content.Shift
 {
-    public abstract class DartShift : ModItem, IShift
+    public abstract class DartShift : ModItem 
     {
-        public abstract bool Shift(Projectile projectile, Player player);
-
         public override bool CanRightClick()
         {
             Player player = Main.LocalPlayer;
